@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>China Buying Team — Your Sourcing & Quality Control Partner in China</title>
+    <meta name="description" content="China Buying Team offers professional sourcing, supplier verification, quality control, and logistics services for overseas buyers. Reliable China procurement agency." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; }
+
+        /* Glassmorphism nav */
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Hero overlay */
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 20, 50, 0.82) 0%, rgba(0, 40, 80, 0.65) 50%, rgba(0, 20, 50, 0.82) 100%);
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #f7b733 0%, #fc4a1a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-blue {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d6a9f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Card hover */
+        .card-hover {
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Step connector line */
+        .step-line {
+            position: absolute;
+            top: 3rem;
+            left: calc(50% + 2.5rem);
+            width: calc(100% - 5rem);
+            height: 2px;
+            background: repeating-linear-gradient(90deg, #cbd5e1 0, #cbd5e1 8px, transparent 8px, transparent 16px);
+        }
+        .step-line-solid {
+            position: absolute;
+            top: 3rem;
+            left: calc(50% + 2.5rem);
+            width: calc(100% - 5rem);
+            height: 2px;
+            background: linear-gradient(90deg, #1e3a5f 0%, #2d6a9f 100%);
+        }
+
+        /* Form focus */
+        .form-input:focus {
+            border-color: #1e3a5f;
+            box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+        }
+
+        /* Button pulse */
+        .btn-primary {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d6a9f 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #152d4a 0%, #1e5a8f 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 12px 28px -8px rgba(30, 58, 95, 0.4);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, #f7b733 0%, #fc4a1a 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-accent:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 28px -8px rgba(252, 74, 26, 0.4);
+        }
+
+        /* Mobile nav */
+        .mobile-menu {
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        /* Stats counter placeholder style */
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        /* Section divider */
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #f7b733, #fc4a1a);
+            border-radius: 2px;
+            margin: 0 auto;
+        }
+
+        /* Testimonial quote */
+        .testimonial-card {
+            border-left: 4px solid #f7b733;
+        }
+
+        /* Floating decoration */
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .stat-number { font-size: 2rem; }
+            .step-line, .step-line-solid { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- HEADER / NAVIGATION                                          -->
+    <!-- ============================================================ -->
+    <header class="nav-glass fixed top-0 left-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+
+                <!-- Brand -->
+                <a href="#" class="flex items-center gap-2.5 group">
+                    <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white font-bold text-sm shadow-md group-hover:shadow-lg transition-shadow">
+                        CBT
+                    </div>
+                    <span class="text-lg font-bold text-[#1e3a5f] tracking-tight">China Buying Team</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#services" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors">Services</a>
+                    <a href="#why-us" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors">Why Us</a>
+                    <a href="#how-it-works" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors">How It Works</a>
+                    <a href="#contact" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors">Contact</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="#contact"
+                       class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white btn-primary shadow-md">
+                        Get Started
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile hamburger -->
+                <button id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-gray-600 hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+                    <i id="menuIcon" class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu lg:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-5 space-y-3">
+                <a href="#services" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]">Services</a>
+                <a href="#why-us" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]">Why Us</a>
+                <a href="#how-it-works" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]">How It Works</a>
+                <a href="#contact" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]">Contact</a>
+                <div class="pt-3">
+                    <a href="#contact"
+                       class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white btn-primary shadow-md">
+                        Get Started
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- HERO BANNER                                                  -->
+    <!-- ============================================================ -->
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden pt-16 lg:pt-20">
+        <!-- Background -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80"
+                 alt="Shipping containers and logistics at port"
+                 class="w-full h-full object-cover" />
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <!-- Floating shapes -->
+        <div class="floating-shape w-72 h-72 bg-[#f7b733] top-10 -left-20"></div>
+        <div class="floating-shape w-96 h-96 bg-[#2d6a9f] bottom-20 -right-24"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div class="max-w-3xl">
+
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs font-medium mb-6">
+                    <i class="fas fa-badge-check text-[#f7b733]"></i>
+                    Trusted by 500+ buyers worldwide
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
+                    Your Dedicated
+                    <span class="gradient-text">Sourcing &amp; Quality Control</span>
+                    Team in China
+                </h1>
+
+                <p class="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
+                    From factory verification to global shipping — we handle every step of your China procurement.
+                    100% transparent, zero hidden fees, and a dedicated local team on the ground.
+                </p>
+
+                <!-- CTA buttons -->
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="#contact"
+                       class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-base font-bold text-white btn-accent shadow-lg shadow-orange-500/20">
+                        Get a Free Quote
+                        <i class="fas fa-paper-plane text-sm"></i>
+                    </a>
+                    <a href="#how-it-works"
+                       class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-base font-semibold text-white bg-white/10 backdrop-blur-sm border border-white/25 hover:bg-white/20 transition-colors">
+                        <i class="fas fa-play-circle text-sm"></i>
+                        See How It Works
+                    </a>
+                </div>
+
+                <!-- Trust indicators -->
+                <div class="mt-12 flex flex-wrap items-center gap-8 text-white/60 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-shield-halved text-[#f7b733]"></i>
+                        <span>Secure &amp; Insured</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-clock text-[#f7b733]"></i>
+                        <span>48h Response Time</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-handshake text-[#f7b733]"></i>
+                        <span>No Middlemen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+            <i class="fas fa-chevron-down text-white/40 text-xl"></i>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TRUSTED / STATS BAR                                          -->
+    <!-- ============================================================ -->
+    <section class="relative bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="stat-number text-[#1e3a5f]">500+</div>
+                    <div class="text-sm text-gray-500 mt-1">Happy Buyers</div>
+                </div>
+                <div>
+                    <div class="stat-number text-[#1e3a5f]">2,800+</div>
+                    <div class="text-sm text-gray-500 mt-1">Factories Verified</div>
+                </div>
+                <div>
+                    <div class="stat-number text-[#1e3a5f]">98.6%</div>
+                    <div class="text-sm text-gray-500 mt-1">On-Time Delivery</div>
+                </div>
+                <div>
+                    <div class="stat-number text-[#1e3a5f]">15+</div>
+                    <div class="text-sm text-gray-500 mt-1">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SERVICES                                                     -->
+    <!-- ============================================================ -->
+    <section id="services" class="relative py-20 lg:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section header -->
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-sm font-semibold text-[#f7b733] tracking-widest uppercase">What We Do</span>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1e3a5f] tracking-tight">
+                    End-to-End Sourcing Services
+                </h2>
+                <div class="section-divider mt-4"></div>
+                <p class="mt-4 text-gray-500 text-lg">
+                    We manage your entire China supply chain so you can focus on growing your business.
+                </p>
+            </div>
+
+            <!-- Service cards -->
+            <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+
+                <!-- Card 1 -->
+                <div class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-xl shadow-md">
+                        <i class="fas fa-building-shield"></i>
+                    </div>
+                    <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]">Supplier Verification</h3>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                        On-site factory audits, business license verification, capability assessment, and compliance checks to ensure you partner with legitimate manufacturers.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-sm text-gray-500">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>On-site factory audit</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>License &amp; compliance check</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Production capacity assessment</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-xl shadow-md">
+                        <i class="fas fa-magnifying-glass-dollar"></i>
+                    </div>
+                    <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]">Product Sourcing &amp; Negotiation</h3>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                        We find the best suppliers for your products and negotiate competitive pricing, payment terms, and MOQs on your behalf.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-sm text-gray-500">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Supplier matchmaking</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Price &amp; MOQ negotiation</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Sample coordination</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-xl shadow-md">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]">Quality Control &amp; Inspection</h3>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                        In-process and pre-shipment inspections by our experienced QC team to ensure product quality meets your specifications.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-sm text-gray-500">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>During production (DUPRO)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Pre-shipment inspection (PSI)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Product testing &amp; certification</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-xl shadow-md">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]">Logistics &amp; Global Shipping</h3>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                        We arrange sea, air, or express shipping with real-time tracking, customs clearance support, and door-to-door delivery options.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-sm text-gray-500">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Sea / Air / Express freight</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Customs clearance support</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Door-to-door delivery</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- WHY CHOOSE US                                                -->
+    <!-- ============================================================ -->
+    <section id="why-us" class="relative py-20 lg:py-28 bg-white overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#1e3a5f]/[0.02] to-transparent pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-sm font-semibold text-[#f7b733] tracking-widest uppercase">Why Choose Us</span>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1e3a5f] tracking-tight">
+                    What Sets Us Apart
+                </h2>
+                <div class="section-divider mt-4"></div>
+                <p class="mt-4 text-gray-500 text-lg">
+                    We believe in radical transparency. No surprises, no hidden fees — just honest, professional service.
+                </p>
+            </div>
+
+            <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                <!-- Item 1 -->
+                <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-[#1e3a5f]">100% Transparent Pricing</h3>
+                        <p class="mt-1 text-sm text-gray-500 leading-relaxed">
+                            You see exactly what the factory charges and what our service fee is. No hidden markups, no surprises.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg">
+                        <i class="fas fa-hand-holding-dollar"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-[#1e3a5f]">Zero Hidden Fees</h3>
+                        <p class="mt-1 text-sm text-gray-500 leading-relaxed">
+                            Our service agreement is straightforward. The price we quote is the price you pay — guaranteed.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg">
+                        <i class="fas fa-people-group"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-[#1e3a5f]">Dedicated Local Team</h3>
+                        <p class="mt-1 text-sm text-gray-500 leading-relaxed">
+                            Your personal sourcing agent based in China speaks your language and understands your business needs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-[#1e3a5f]">Fast Response Time</h3>
+                        <p class="mt-1 text-sm text-gray-500 leading-relaxed">
+                            We respond to all inquiries within 24 hours. Urgent requests get same-day attention.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg">
+                        <i class="fas fa-scale-balanced"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-[#1e3a5f]">Quality Guarantee</h3>
+                        <p class="mt-1 text-sm text-gray-500 leading-relaxed">
+                            If the product doesn't meet agreed specifications, we work with the factory to make it right or your money back.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-[#1e3a5f]">Global Reach</h3>
+                        <p class="mt-1 text-sm text-gray-500 leading-relaxed">
+                            We ship to 50+ countries worldwide. Our logistics partners ensure your goods arrive safely and on time.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- HOW IT WORKS                                                 -->
+    <!-- ============================================================ -->
+    <section id="how-it-works" class="relative py-20 lg:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-sm font-semibold text-[#f7b733] tracking-widest uppercase">How It Works</span>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1e3a5f] tracking-tight">
+                    From Inquiry to Delivery in 4 Simple Steps
+                </h2>
+                <div class="section-divider mt-4"></div>
+                <p class="mt-4 text-gray-500 text-lg">
+                    We've streamlined the sourcing process so you get results fast, without the headache.
+                </p>
+            </div>
+
+            <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+
+                <!-- Step 1 -->
+                <div class="relative text-center">
+                    <div class="relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] text-white text-xl font-bold shadow-lg mx-auto">
+                        1
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-[#1e3a5f]">Submit Your Requirements</h3>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">
+                        Tell us what you need — product details, quantities, budget, and any special requirements.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative text-center">
+                    <!-- Connector line (desktop) -->
+                    <div class="step-line hidden lg:block"></div>
+                    <div class="relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] text-white text-xl font-bold shadow-lg mx-auto">
+                        2
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-[#1e3a5f]">Supplier Matching</h3>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">
+                        We identify and vet the best factories, then present you with shortlisted options and quotes.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative text-center">
+                    <div class="step-line hidden lg:block"></div>
+                    <div class="relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] text-white text-xl font-bold shadow-lg mx-auto">
+                        3
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-[#1e3a5f]">Production &amp; QC</h3>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">
+                        Once you approve, we oversee production and conduct rigorous quality inspections at every stage.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative text-center">
+                    <div class="step-line hidden lg:block"></div>
+                    <div class="relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] text-white text-xl font-bold shadow-lg mx-auto">
+                        4
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-[#1e3a5f]">Shipping &amp; Delivery</h3>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">
+                        We arrange global shipping with real-time tracking, and your goods arrive at your doorstep.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="mt-14 text-center">
+                <a href="#contact"
+                   class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-base font-bold text-white btn-accent shadow-lg shadow-orange-500/20">
+                    Start Your Sourcing Journey
+                    <i class="fas fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TESTIMONIALS (social proof)                                  -->
+    <!-- ============================================================ -->
+    <section class="relative py-20 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-sm font-semibold text-[#f7b733] tracking-widest uppercase">Testimonials</span>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1e3a5f] tracking-tight">
+                    Trusted by Buyers Worldwide
+                </h2>
+                <div class="section-divider mt-4"></div>
+            </div>
+
+            <div class="mt-14 grid md:grid-cols-3 gap-6 lg:gap-8">
+
+                <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8">
+                    <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        "China Buying Team saved us months of supplier research. They found vetted factories that beat our target pricing by 15%. Incredible service."
+                    </p>
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">MK</div>
+                        <div>
+                            <div class="text-sm font-semibold text-[#1e3a5f]">Michael K.</div>
+                            <div class="text-xs text-gray-400">E-commerce Founder, UK</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8">
+                    <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        "The QC inspections are thorough and professional. They caught issues before shipment that would have cost us thousands. Highly recommend."
+                    </p>
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">SL</div>
+                        <div>
+                            <div class="text-sm font-semibold text-[#1e3a5f]">Sarah L.</div>
+                            <div class="text-xs text-gray-400">Retail Buyer, Australia</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8">
+                    <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        "Transparent pricing was the biggest win for me. I know exactly what the factory charges vs. their fee. No games, just honest business."
+                    </p>
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">DR</div>
+                        <div>
+                            <div class="text-sm font-semibold text-[#1e3a5f]">David R.</div>
+                            <div class="text-xs text-gray-400">Startup Founder, USA</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CONTACT US / INQUIRY FORM                                    -->
+    <!-- ============================================================ -->
+    <section id="contact" class="relative py-20 lg:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-sm font-semibold text-[#f7b733] tracking-widest uppercase">Get In Touch</span>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1e3a5f] tracking-tight">
+                    Let's Discuss Your Sourcing Needs
+                </h2>
+                <div class="section-divider mt-4"></div>
+                <p class="mt-4 text-gray-500 text-lg">
+                    Fill out the form below and we'll get back to you within 24 hours with a tailored proposal.
+                </p>
+            </div>
+
+            <div class="mt-14 max-w-3xl mx-auto">
+                <form action="#" method="POST" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-10 lg:p-12">
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <!-- Name -->
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-700 mb-1.5">Full Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="name" name="name" required
+                                   placeholder="John Smith"
+                                   class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-700 placeholder-gray-400 outline-none transition-all" />
+                        </div>
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-1.5">Email Address <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required
+                                   placeholder="john@example.com"
+                                   class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-700 placeholder-gray-400 outline-none transition-all" />
+                        </div>
+                    </div>
+
+                    <!-- Company -->
+                    <div class="mt-6">
+                        <label for="company" class="block text-sm font-semibold text-gray-700 mb-1.5">Company Name</label>
+                        <input type="text" id="company" name="company"
+                               placeholder="Your Company Ltd."
+                               class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-700 placeholder-gray-400 outline-none transition-all" />
+                    </div>
+
+                    <!-- Product description -->
+                    <div class="mt-6">
+                        <label for="message" class="block text-sm font-semibold text-gray-700 mb-1.5">Product / Sourcing Requirements <span class="text-red-500">*</span></label>
+                        <textarea id="message" name="message" rows="5" required
+                                  placeholder="Please describe the products you're looking for, target quantity, budget range, and any specific requirements..."
+                                  class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-700 placeholder-gray-400 outline-none transition-all resize-y"></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="mt-8">
+                        <button type="submit"
+                                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-3.5 rounded-full text-base font-bold text-white btn-accent shadow-lg shadow-orange-500/20 transition-all">
+                            <i class="fas fa-paper-plane text-sm"></i>
+                            Send Inquiry
+                        </button>
+                        <p class="mt-3 text-xs text-gray-400">
+                            <i class="fas fa-lock text-gray-300 mr-1"></i>
+                            Your information is safe with us. We'll never share your data.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER                                                       -->
+    <!-- ============================================================ -->
+    <footer class="bg-[#0f1a2e] text-gray-400">
+        <!-- Main footer -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+
+                <!-- Brand -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white font-bold text-sm shadow-md">
+                            CBT
+                        </div>
+                        <span class="text-lg font-bold text-white tracking-tight">China Buying Team</span>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500 leading-relaxed">
+                        Your trusted sourcing, quality control, and logistics partner in China. We help overseas buyers source products with confidence.
+                    </p>
+                    <div class="mt-5 flex gap-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+                    <ul class="mt-4 space-y-2.5">
+                        <li><a href="#services" class="text-sm text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#why-us" class="text-sm text-gray-400 hover:text-white transition-colors">Why Us</a></li>
+                        <li><a href="#how-it-works" class="text-sm text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#contact" class="text-sm text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+                    <ul class="mt-4 space-y-2.5">
+                        <li><a href="#services" class="text-sm text-gray-400 hover:text-white transition-colors">Supplier Verification</a></li>
+                        <li><a href="#services" class="text-sm text-gray-400 hover:text-white transition-colors">Product Sourcing</a></li>
+                        <li><a href="#services" class="text-sm text-gray-400 hover:text-white transition-colors">Quality Control</a></li>
+                        <li><a href="#services" class="text-sm text-gray-400 hover:text-white transition-colors">Logistics &amp; Shipping</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Contact</h4>
+                    <ul class="mt-4 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-0.5 text-[#f7b733] text-sm"></i>
+                            <a href="mailto:hello@chinabuyingteam.com" class="text-sm text-gray-400 hover:text-white transition-colors">
+                                hello@chinabuyingteam.com
+                            </a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone mt-0.5 text-[#f7b733] text-sm"></i>
+                            <span class="text-sm text-gray-400">+86 (0755) 8888-8888</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-location-dot mt-0.5 text-[#f7b733] text-sm"></i>
+                            <span class="text-sm text-gray-400">Shenzhen, Guangdong, China</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-clock mt-0.5 text-[#f7b733] text-sm"></i>
+                            <span class="text-sm text-gray-400">Mon–Fri 9:00–18:00 (CST)</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p class="text-xs text-gray-500">
+                    &copy; 2026 China Buying Team. All rights reserved.
+                </p>
+                <div class="flex items-center gap-4 text-xs text-gray-500">
+                    <a href="#" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- MOBILE MENU TOGGLE SCRIPT                                    -->
+    <!-- ============================================================ -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileMenu.classList.toggle('open', menuOpen);
+            menuIcon.className = menuOpen ? 'fas fa-xmark text-xl' : 'fas fa-bars text-xl';
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.classList.remove('open');
+                menuIcon.className = 'fas fa-bars text-xl';
+            });
+        });
+    </script>
+
+</body>
+</html>
