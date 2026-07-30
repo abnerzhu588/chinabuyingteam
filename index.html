@@ -683,12 +683,13 @@
             </div>
 
             <div class="mt-14 max-w-3xl mx-auto">
-                <form id="contactForm" action="https://formspree.io/f/REPLACE_ME" method="POST" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-10 lg:p-12">
+                <form id="contactForm" action="https://formsubmit.co/abnerzhu588@gmail.com" method="POST" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-10 lg:p-12">
 
-                    <!-- Hidden redirect after submission -->
-                    <input type="hidden" name="_redirect" value="https://chinabuyingteam.com" />
+                    <!-- Hidden fields -->
                     <input type="hidden" name="_subject" value="New Inquiry from chinabuyingteam.com" />
-                    <input type="hidden" name="_replyto" value="email" />
+                    <input type="hidden" name="_next" value="https://chinabuyingteam.com" />
+                    <input type="hidden" name="_captcha" value="true" />
+                    <input type="text" name="_honey" style="display:none" />
 
                     <div id="formSuccess" class="hidden text-center py-8">
                         <div class="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 text-3xl mx-auto mb-4">
@@ -770,10 +771,10 @@
                                 formFields.classList.add('hidden');
                                 formSuccess.classList.remove('hidden');
                             } else {
-                                alert('Oops! Something went wrong. Please try again or email us directly at hello@chinabuyingteam.com');
+                                alert('Oops! Something went wrong. Please try again or email us directly at abnerzhu588@gmail.com');
                             }
                         } catch (err) {
-                            alert('Network error. Please try again or email us directly at hello@chinabuyingteam.com');
+                            alert('Network error. Please try again or email us directly at abnerzhu588@gmail.com');
                         } finally {
                             submitBtn.disabled = false;
                             submitBtn.innerHTML = '<i class="fas fa-paper-plane text-sm"></i> Send Inquiry';
@@ -847,8 +848,8 @@
                     <ul class="mt-4 space-y-3">
                         <li class="flex items-start gap-3">
                             <i class="fas fa-envelope mt-0.5 text-[#f7b733] text-sm"></i>
-                            <a href="mailto:hello@chinabuyingteam.com" class="text-sm text-gray-400 hover:text-white transition-colors">
-                                hello@chinabuyingteam.com
+                            <a href="mailto:abnerzhu588@gmail.com" class="text-sm text-gray-400 hover:text-white transition-colors">
+                                abnerzhu588@gmail.com
                             </a>
                         </li>
                         <li class="flex items-start gap-3">
