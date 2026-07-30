@@ -322,117 +322,91 @@
                 </p>
             </div>
 
-            <!-- Service cards - 10 items -->
-            <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+            <!-- Service cards - 3 core services -->
+            <div class="mt-14 grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
 
-                <!-- 1. Supplier Selection & RFQ -->
-                <div class="card-hover bg-white rounded-xl p-5 lg:p-6 shadow-sm border border-gray-100 text-center">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-lg shadow-md mx-auto">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 class="mt-3 text-sm font-bold text-[#1e3a5f]">Supplier Selection &amp; RFQ</h3>
-                    <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">
-                        Identify qualified suppliers and send RFQs to get competitive quotes tailored to your needs.
-                    </p>
-                </div>
-
-                <!-- 2. Factory Audit -->
-                <div class="card-hover bg-white rounded-xl p-5 lg:p-6 shadow-sm border border-gray-100 text-center">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-lg shadow-md mx-auto">
+                <!-- 1. Factory Audit & Inspection -->
+                <div class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-xl shadow-md">
                         <i class="fas fa-building-shield"></i>
                     </div>
-                    <h3 class="mt-3 text-sm font-bold text-[#1e3a5f]">Factory Audit</h3>
-                    <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">
-                        On-site verification of facilities, certifications, capacity, and compliance before you commit.
+                    <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]">Factory Audit &amp; Inspection</h3>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                        工厂审核与实地验厂
                     </p>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                        Comprehensive on-site factory audits covering facilities, certifications, production capacity, and compliance. We verify every supplier so you can partner with confidence.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-sm text-gray-500">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>On-site facility &amp; capability audit</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>License, compliance &amp; social compliance</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Detailed audit report with photos</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- 3. Landed Cost Analysis -->
-                <div class="card-hover bg-white rounded-xl p-5 lg:p-6 shadow-sm border border-gray-100 text-center">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-lg shadow-md mx-auto">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3 class="mt-3 text-sm font-bold text-[#1e3a5f]">Landed Cost Analysis</h3>
-                    <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">
-                        Full cost breakdown including product, shipping, duties, and taxes — no hidden surprises.
-                    </p>
-                </div>
-
-                <!-- 4. IP Protection -->
-                <div class="card-hover bg-white rounded-xl p-5 lg:p-6 shadow-sm border border-gray-100 text-center">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-lg shadow-md mx-auto">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3 class="mt-3 text-sm font-bold text-[#1e3a5f]">Intellectual Property Protection</h3>
-                    <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">
-                        NDAs, trademark registration, design patents, and anti-counterfeiting measures to safeguard your IP.
-                    </p>
-                </div>
-
-                <!-- 5. Prototype Development -->
-                <div class="card-hover bg-white rounded-xl p-5 lg:p-6 shadow-sm border border-gray-100 text-center">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-lg shadow-md mx-auto">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3 class="mt-3 text-sm font-bold text-[#1e3a5f]">Prototype Development</h3>
-                    <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">
-                        Coordinate sample creation, tooling, and iterative refinements until your product meets specs.
-                    </p>
-                </div>
-
-                <!-- 6. Price & Contract Negotiation -->
-                <div class="card-hover bg-white rounded-xl p-5 lg:p-6 shadow-sm border border-gray-100 text-center">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-lg shadow-md mx-auto">
-                        <i class="fas fa-file-signature"></i>
-                    </div>
-                    <h3 class="mt-3 text-sm font-bold text-[#1e3a5f]">Price &amp; Contract Negotiation</h3>
-                    <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">
-                        Negotiate pricing, payment terms, MOQs, and delivery schedules to secure the best deal.
-                    </p>
-                </div>
-
-                <!-- 7. During Production Inspection (DUPRO) -->
-                <div class="card-hover bg-white rounded-xl p-5 lg:p-6 shadow-sm border border-gray-100 text-center">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-lg shadow-md mx-auto">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3 class="mt-3 text-sm font-bold text-[#1e3a5f]">During Production Inspection</h3>
-                    <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">
-                        Mid-production quality checks to catch issues early and ensure manufacturing stays on track.
-                    </p>
-                </div>
-
-                <!-- 8. Pre-Shipment Inspection -->
-                <div class="card-hover bg-white rounded-xl p-5 lg:p-6 shadow-sm border border-gray-100 text-center">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-lg shadow-md mx-auto">
+                <!-- 2. Quality Control & Inspection -->
+                <div class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-xl shadow-md">
                         <i class="fas fa-clipboard-check"></i>
                     </div>
-                    <h3 class="mt-3 text-sm font-bold text-[#1e3a5f]">Pre-Shipment Inspection</h3>
-                    <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">
-                        Final quality checks before shipment — random sampling, functional tests, and packaging verification.
+                    <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]">Quality Control &amp; Inspection</h3>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                        全流程质量控制与双重检验
                     </p>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                        Dual-stage quality checks — during production (DUPRO) and pre-shipment (PSI). Our experienced inspectors ensure your products meet every specification before leaving the factory.
+                    </p>
+                    <ul class="mt-4 space-y-1.5 text-sm text-gray-500">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>During-production inspection (DUPRO)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Pre-shipment inspection (PSI)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Product testing &amp; compliance certification</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- 9. Quality Control Management -->
-                <div class="card-hover bg-white rounded-xl p-5 lg:p-6 shadow-sm border border-gray-100 text-center">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-lg shadow-md mx-auto">
-                        <i class="fas fa-chart-line"></i>
+                <!-- 3. Landed Cost Analysis & Price Negotiation -->
+                <div class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-xl shadow-md">
+                        <i class="fas fa-calculator"></i>
                     </div>
-                    <h3 class="mt-3 text-sm font-bold text-[#1e3a5f]">Quality Control Management</h3>
-                    <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">
-                        End-to-end QC program management — from raw material check to final product testing and reporting.
+                    <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]">Landed Cost Analysis &amp; Negotiation</h3>
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                        到岸成本分析与询价谈判
                     </p>
-                </div>
-
-                <!-- 10. Procurement Agency Service -->
-                <div class="card-hover bg-white rounded-xl p-5 lg:p-6 shadow-sm border border-gray-100 text-center">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-lg shadow-md mx-auto">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3 class="mt-3 text-sm font-bold text-[#1e3a5f]">Procurement Agency Service</h3>
-                    <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">
-                        Full-service procurement outsourcing — we act as your dedicated China buying office, managing everything end to end.
+                    <p class="mt-2 text-sm text-gray-500 leading-relaxed">
+                        Full cost transparency from factory to doorstep. We analyze every cost component and negotiate aggressively on your behalf to secure the best pricing and terms.
                     </p>
+                    <ul class="mt-4 space-y-1.5 text-sm text-gray-500">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Detailed landed cost breakdown</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Price &amp; MOQ negotiation</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs"></i>
+                            <span>Payment terms &amp; contract review</span>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
