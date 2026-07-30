@@ -598,7 +598,7 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- TESTIMONIALS (social proof)                                  -->
+    <!-- TESTIMONIALS (social proof - carousel)                       -->
     <!-- ============================================================ -->
     <section class="relative py-20 lg:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -611,58 +611,220 @@
                 <div class="section-divider mt-4"></div>
             </div>
 
-            <div class="mt-14 grid md:grid-cols-3 gap-6 lg:gap-8">
+            <div class="mt-14 relative overflow-hidden" id="testimonialCarousel">
+                <!-- Track -->
+                <div id="testimonialTrack" class="flex transition-transform duration-500 ease-in-out">
 
-                <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8">
-                    <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        "abnerchinasourcing saved us months of supplier research. They found vetted factories that beat our target pricing by 15%. Incredible service."
-                    </p>
-                    <div class="mt-4 flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">MK</div>
-                        <div>
-                            <div class="text-sm font-semibold text-[#1e3a5f]">Michael K.</div>
-                            <div class="text-xs text-gray-400">E-commerce Founder, UK</div>
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[33.333%] px-3">
+                        <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8 h-full">
+                            <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                "abnerchinasourcing saved us months of supplier research. They found vetted factories that beat our target pricing by 15%. Incredible service."
+                            </p>
+                            <div class="mt-4 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">MK</div>
+                                <div>
+                                    <div class="text-sm font-semibold text-[#1e3a5f]">Michael K.</div>
+                                    <div class="text-xs text-gray-400">E-commerce Founder, UK</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8">
-                    <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        "The QC inspections are thorough and professional. They caught issues before shipment that would have cost us thousands. Highly recommend."
-                    </p>
-                    <div class="mt-4 flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">SL</div>
-                        <div>
-                            <div class="text-sm font-semibold text-[#1e3a5f]">Sarah L.</div>
-                            <div class="text-xs text-gray-400">Retail Buyer, Australia</div>
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[33.333%] px-3">
+                        <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8 h-full">
+                            <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                "The QC inspections are thorough and professional. They caught issues before shipment that would have cost us thousands. Highly recommend."
+                            </p>
+                            <div class="mt-4 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">SL</div>
+                                <div>
+                                    <div class="text-sm font-semibold text-[#1e3a5f]">Sarah L.</div>
+                                    <div class="text-xs text-gray-400">Retail Buyer, Australia</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8">
-                    <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        "Transparent pricing was the biggest win for me. I know exactly what the factory charges vs. their fee. No games, just honest business."
-                    </p>
-                    <div class="mt-4 flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">DR</div>
-                        <div>
-                            <div class="text-sm font-semibold text-[#1e3a5f]">David R.</div>
-                            <div class="text-xs text-gray-400">Startup Founder, USA</div>
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[33.333%] px-3">
+                        <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8 h-full">
+                            <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                "Transparent pricing was the biggest win for me. I know exactly what the factory charges vs. their fee. No games, just honest business."
+                            </p>
+                            <div class="mt-4 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">DR</div>
+                                <div>
+                                    <div class="text-sm font-semibold text-[#1e3a5f]">David R.</div>
+                                    <div class="text-xs text-gray-400">Startup Founder, USA</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                    <!-- Slide 4 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[33.333%] px-3">
+                        <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8 h-full">
+                            <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                "We've been sourcing from China for 5 years. abnerchinasourcing is by far the most professional partner we've worked with. Their factory audit reports are incredibly detailed."
+                            </p>
+                            <div class="mt-4 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">JL</div>
+                                <div>
+                                    <div class="text-sm font-semibold text-[#1e3a5f]">James L.</div>
+                                    <div class="text-xs text-gray-400">Import Manager, Canada</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[33.333%] px-3">
+                        <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8 h-full">
+                            <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                "The landed cost analysis alone saved us 20% on our first order. They found hidden fees we had no idea about. Absolutely essential for any importer."
+                            </p>
+                            <div class="mt-4 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">AM</div>
+                                <div>
+                                    <div class="text-sm font-semibold text-[#1e3a5f]">Anna M.</div>
+                                    <div class="text-xs text-gray-400">Fashion Brand Owner, Germany</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="testimonial-slide min-w-full md:min-w-[33.333%] px-3">
+                        <div class="testimonial-card bg-gray-50 rounded-2xl p-6 lg:p-8 h-full">
+                            <div class="flex gap-1 text-[#f7b733] text-sm mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                "Their DUPRO inspection caught a material defect before 50% of our order was produced. The factory fixed it immediately. Without them, we'd have received defective goods."
+                            </p>
+                            <div class="mt-4 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-[#1e3a5f] flex items-center justify-center text-white text-sm font-bold">RT</div>
+                                <div>
+                                    <div class="text-sm font-semibold text-[#1e3a5f]">Robert T.</div>
+                                    <div class="text-xs text-gray-400">Hardware Retailer, UAE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Navigation dots -->
+            <div class="flex justify-center gap-2 mt-8">
+                <button onclick="goToSlide(0)" class="testimonial-dot w-2.5 h-2.5 rounded-full bg-[#1e3a5f]/30 hover:bg-[#1e3a5f]/50 transition-colors" aria-label="Slide 1"></button>
+                <button onclick="goToSlide(1)" class="testimonial-dot w-2.5 h-2.5 rounded-full bg-[#1e3a5f]/30 hover:bg-[#1e3a5f]/50 transition-colors" aria-label="Slide 2"></button>
+                <button onclick="goToSlide(2)" class="testimonial-dot w-2.5 h-2.5 rounded-full bg-[#1e3a5f]/30 hover:bg-[#1e3a5f]/50 transition-colors" aria-label="Slide 3"></button>
+                <button onclick="goToSlide(3)" class="testimonial-dot w-2.5 h-2.5 rounded-full bg-[#1e3a5f]/30 hover:bg-[#1e3a5f]/50 transition-colors" aria-label="Slide 4"></button>
+                <button onclick="goToSlide(4)" class="testimonial-dot w-2.5 h-2.5 rounded-full bg-[#1e3a5f]/30 hover:bg-[#1e3a5f]/50 transition-colors" aria-label="Slide 5"></button>
+                <button onclick="goToSlide(5)" class="testimonial-dot w-2.5 h-2.5 rounded-full bg-[#1e3a5f]/30 hover:bg-[#1e3a5f]/50 transition-colors" aria-label="Slide 6"></button>
             </div>
         </div>
+
+        <script>
+            (function() {
+                const track = document.getElementById('testimonialTrack');
+                const dots = document.querySelectorAll('.testimonial-dot');
+                const slides = track.querySelectorAll('.testimonial-slide');
+                let currentIndex = 0;
+                let interval;
+
+                function getSlidesPerView() {
+                    return window.innerWidth >= 768 ? 3 : 1;
+                }
+
+                function getTotalSlides() {
+                    return slides.length;
+                }
+
+                function getMaxIndex() {
+                    return Math.ceil(getTotalSlides() / getSlidesPerView()) - 1;
+                }
+
+                function goToSlide(index) {
+                    const spp = getSlidesPerView();
+                    const maxIdx = getMaxIndex();
+                    currentIndex = Math.min(index, maxIdx);
+                    const offset = spp === 3 ? -(currentIndex * 100) : -(currentIndex * 100);
+                    track.style.transform = 'translateX(' + offset + '%)';
+
+                    // Update dots
+                    dots.forEach((dot, i) => {
+                        if (i === currentIndex) {
+                            dot.classList.remove('bg-[#1e3a5f]/30');
+                            dot.classList.add('bg-[#1e3a5f]');
+                        } else {
+                            dot.classList.remove('bg-[#1e3a5f]');
+                            dot.classList.add('bg-[#1e3a5f]/30');
+                        }
+                    });
+                }
+
+                function nextSlide() {
+                    const maxIdx = getMaxIndex();
+                    const next = (currentIndex + 1) > maxIdx ? 0 : currentIndex + 1;
+                    goToSlide(next);
+                }
+
+                function startAutoPlay() {
+                    stopAutoPlay();
+                    interval = setInterval(nextSlide, 4000);
+                }
+
+                function stopAutoPlay() {
+                    if (interval) {
+                        clearInterval(interval);
+                        interval = null;
+                    }
+                }
+
+                // Expose goToSlide globally
+                window.goToSlide = function(index) {
+                    goToSlide(index);
+                    startAutoPlay(); // restart timer on manual click
+                };
+
+                // Pause on hover
+                const container = document.getElementById('testimonialCarousel');
+                container.addEventListener('mouseenter', stopAutoPlay);
+                container.addEventListener('mouseleave', startAutoPlay);
+
+                // Handle resize
+                let resizeTimeout;
+                window.addEventListener('resize', function() {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(function() {
+                        goToSlide(currentIndex);
+                    }, 200);
+                });
+
+                // Init
+                goToSlide(0);
+                startAutoPlay();
+            })();
+        </script>
     </section>
 
     <!-- ============================================================ -->
