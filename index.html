@@ -687,7 +687,7 @@
 
                     <!-- Hidden fields -->
                     <input type="hidden" name="_subject" value="New Inquiry from chinabuyingteam.com" />
-                    <input type="hidden" name="_next" value="https://chinabuyingteam.com" />
+                    <input type="hidden" name="_next" value="https://chinabuyingteam.com/#success" />
                     <input type="hidden" name="_captcha" value="true" />
                     <input type="text" name="_honey" style="display:none" />
 
@@ -748,38 +748,14 @@
                     </div>
                 </form>
 
-                <!-- Form submission JavaScript -->
+                <!-- Success detection on redirect -->
                 <script>
-                    const form = document.getElementById('contactForm');
-                    const formFields = document.getElementById('formFields');
-                    const formSuccess = document.getElementById('formSuccess');
-                    const submitBtn = document.getElementById('submitBtn');
-
-                    form.addEventListener('submit', async (e) => {
-                        e.preventDefault();
-                        submitBtn.disabled = true;
-                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin text-sm"></i> Sending...';
-
-                        try {
-                            const response = await fetch(form.action, {
-                                method: 'POST',
-                                body: new FormData(form),
-                                headers: { 'Accept': 'application/json' }
-                            });
-
-                            if (response.ok) {
-                                formFields.classList.add('hidden');
-                                formSuccess.classList.remove('hidden');
-                            } else {
-                                alert('Oops! Something went wrong. Please try again or email us directly at abnerzhu588@gmail.com');
-                            }
-                        } catch (err) {
-                            alert('Network error. Please try again or email us directly at abnerzhu588@gmail.com');
-                        } finally {
-                            submitBtn.disabled = false;
-                            submitBtn.innerHTML = '<i class="fas fa-paper-plane text-sm"></i> Send Inquiry';
-                        }
-                    });
+                    if (window.location.hash === '#success') {
+                        document.getElementById('formFields').classList.add('hidden');
+                        document.getElementById('formSuccess').classList.remove('hidden');
+                        // Scroll to the form
+                        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                    }
                 </script>
             </div>
         </div>
