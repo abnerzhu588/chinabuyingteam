@@ -435,6 +435,55 @@
             pointer-events: none;
         }
 
+        /* Solutions dropdown */
+        .solutions-dropdown {
+            position: relative;
+            cursor: pointer;
+        }
+        .solutions-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.2s ease;
+            z-index: 60;
+            overflow: hidden;
+        }
+        .solutions-dropdown-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .solutions-option {
+            padding: 10px 16px;
+            font-size: 0.875rem;
+            color: #374151;
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.15s;
+            text-decoration: none;
+        }
+        .solutions-option:hover {
+            background: #f3f4f6;
+            color: #1e3a5f;
+        }
+        .solutions-option.active {
+            background: #eff6ff;
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
         /* Language switcher */
         .lang-dropdown {
             position: relative;
@@ -514,6 +563,21 @@
                 <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
                     <a href="#services" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-services">Services</a>
                     <a href="products.html" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-products">Products</a>
+                    <div class="solutions-dropdown" id="solutionsDropdown">
+                        <button id="solutionsToggle" class="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" aria-haspopup="true">
+                            <span data-lang="nav-solutions">Solutions</span>
+                            <i class="fas fa-chevron-down text-[10px]"></i>
+                        </button>
+                        <div class="solutions-dropdown-menu" id="solutionsMenu" role="menu">
+                            <a href="solutions.html#private-label" class="solutions-option" data-lang="sol-private-label">Private Label</a>
+                            <a href="solutions.html#product-development" class="solutions-option" data-lang="sol-product-development">Product Development</a>
+                            <a href="solutions.html#shipping-solution" class="solutions-option" data-lang="sol-shipping">Shipping Solution</a>
+                            <a href="solutions.html#amazon-fba" class="solutions-option" data-lang="sol-amazon-fba">Amazon FBA</a>
+                            <a href="solutions.html#quality-control" class="solutions-option" data-lang="sol-quality-control">Quality Control</a>
+                            <a href="solutions.html#credit-payment" class="solutions-option" data-lang="sol-credit-payment">Credit Payment Terms</a>
+                            <a href="solutions.html#affiliate-program" class="solutions-option" data-lang="sol-affiliate">Affiliate Program</a>
+                        </div>
+                    </div>
                     <a href="#why-us" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-why-us">Why Us</a>
                     <a href="#how-it-works" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-how">How It Works</a>
                     <a href="faq.html" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-faq">FAQ</a>
@@ -557,6 +621,21 @@
             <div class="px-4 py-5 space-y-3">
                 <a href="#services" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-services">Services</a>
                 <a href="products.html" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-products">Products</a>
+                <div>
+                    <button id="mobileSolutionsToggle" class="flex items-center justify-between w-full py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]">
+                        <span data-lang="nav-solutions">Solutions</span>
+                        <i class="fas fa-chevron-down text-[10px] transition-transform duration-200" id="mobileSolutionsArrow"></i>
+                    </button>
+                    <div id="mobileSolutionsSubmenu" class="hidden pl-4 pb-2 space-y-1">
+                        <a href="solutions.html#private-label" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-private-label">Private Label</a>
+                        <a href="solutions.html#product-development" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-product-development">Product Development</a>
+                        <a href="solutions.html#shipping-solution" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-shipping">Shipping Solution</a>
+                        <a href="solutions.html#amazon-fba" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-amazon-fba">Amazon FBA</a>
+                        <a href="solutions.html#quality-control" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-quality-control">Quality Control</a>
+                        <a href="solutions.html#credit-payment" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-credit-payment">Credit Payment Terms</a>
+                        <a href="solutions.html#affiliate-program" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-affiliate">Affiliate Program</a>
+                    </div>
+                </div>
                 <a href="#why-us" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-why-us">Why Us</a>
                 <a href="#how-it-works" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-how">How It Works</a>
                 <a href="faq.html" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-faq">FAQ</a>
@@ -1536,6 +1615,14 @@
                 en: {
                     "nav-services": "Services",
                     "nav-products": "Products",
+                    "nav-solutions": "Solutions",
+                    "sol-private-label": "Private Label",
+                    "sol-product-development": "Product Development",
+                    "sol-shipping": "Shipping Solution",
+                    "sol-amazon-fba": "Amazon FBA",
+                    "sol-quality-control": "Quality Control",
+                    "sol-credit-payment": "Credit Payment Terms",
+                    "sol-affiliate": "Affiliate Program",
                     "nav-agent": "Why Agent",
                     "nav-why-us": "Why Us",
                     "nav-how": "How It Works",
@@ -1714,6 +1801,14 @@
                 zh: {
                     "nav-services": "Services",
                     "nav-products": "Products",
+                    "nav-solutions": "解决方案",
+                    "sol-private-label": "自有品牌",
+                    "sol-product-development": "产品开发",
+                    "sol-shipping": "运输解决方案",
+                    "sol-amazon-fba": "Amazon FBA",
+                    "sol-quality-control": "质量控制",
+                    "sol-credit-payment": "信用付款条款",
+                    "sol-affiliate": "联盟计划",
                     "nav-agent": "Why Agent",
                     "nav-why-us": "Advantages",
                     "nav-how": "Process",
@@ -1867,6 +1962,14 @@
                 },                ja: {
                     "nav-services": "サービス",
                     "nav-products": "製品",
+                    "nav-solutions": "ソリューション",
+                    "sol-private-label": "プライベートラベル",
+                    "sol-product-development": "製品開発",
+                    "sol-shipping": "配送ソリューション",
+                    "sol-amazon-fba": "Amazon FBA",
+                    "sol-quality-control": "品質管理",
+                    "sol-credit-payment": "与信決済条件",
+                    "sol-affiliate": "アフィリエイトプログラム",
                     "nav-agent": "代理店を選ぶ理由",
                     "nav-why-us": "強み",
                     "nav-how": "流れ",
@@ -2021,6 +2124,14 @@
                 ko: {
                     "nav-services": "서비스",
                     "nav-products": "제품",
+                    "nav-solutions": "솔루션",
+                    "sol-private-label": "자체 브랜드",
+                    "sol-product-development": "제품 개발",
+                    "sol-shipping": "배송 솔루션",
+                    "sol-amazon-fba": "Amazon FBA",
+                    "sol-quality-control": "품질 관리",
+                    "sol-credit-payment": "신용 결제 조건",
+                    "sol-affiliate": "제휴 프로그램",
                     "nav-agent": "에이전트 이유",
                     "nav-why-us": "강점",
                     "nav-how": "프로세스",
@@ -2175,6 +2286,14 @@
                 es: {
                     "nav-services": "Servicios",
                     "nav-products": "Productos",
+                    "nav-solutions": "Soluciones",
+                    "sol-private-label": "Marca Privada",
+                    "sol-product-development": "Desarrollo de Productos",
+                    "sol-shipping": "Solución de Envío",
+                    "sol-amazon-fba": "Amazon FBA",
+                    "sol-quality-control": "Control de Calidad",
+                    "sol-credit-payment": "Términos de Pago",
+                    "sol-affiliate": "Programa de Afiliados",
                     "nav-agent": "Por Qu\u00e9 Agente",
                     "nav-why-us": "Por Qu\u00e9",
                     "nav-how": "C\u00f3mo Funciona",
@@ -2353,6 +2472,33 @@
                 e.stopPropagation();
                 document.getElementById('langMenu').classList.toggle('open');
             });
+
+            // Solutions dropdown toggle
+            const solutionsToggle = document.getElementById('solutionsToggle');
+            const solutionsMenu = document.getElementById('solutionsMenu');
+            if (solutionsToggle && solutionsMenu) {
+                solutionsToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    document.getElementById('langMenu').classList.remove('open');
+                    solutionsMenu.classList.toggle('open');
+                });
+                document.addEventListener('click', function() {
+                    solutionsMenu.classList.remove('open');
+                });
+            }
+
+            // Mobile solutions submenu toggle
+            const mobileSolutionsToggle = document.getElementById('mobileSolutionsToggle');
+            const mobileSolutionsSubmenu = document.getElementById('mobileSolutionsSubmenu');
+            const mobileSolutionsArrow = document.getElementById('mobileSolutionsArrow');
+            if (mobileSolutionsToggle && mobileSolutionsSubmenu) {
+                mobileSolutionsToggle.addEventListener('click', function() {
+                    mobileSolutionsSubmenu.classList.toggle('hidden');
+                    if (mobileSolutionsArrow) {
+                        mobileSolutionsArrow.style.transform = mobileSolutionsSubmenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                    }
+                });
+            }
 
             document.querySelectorAll('.lang-option').forEach(btn => {
                 btn.addEventListener('click', function() { setLanguage(this.dataset.langCode); });

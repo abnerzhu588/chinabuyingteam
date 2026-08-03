@@ -210,6 +210,55 @@
             opacity: 1;
         }
 
+        /* Solutions dropdown */
+        .solutions-dropdown {
+            position: relative;
+            cursor: pointer;
+        }
+        .solutions-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.2s ease;
+            z-index: 60;
+            overflow: hidden;
+        }
+        .solutions-dropdown-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .solutions-option {
+            padding: 10px 16px;
+            font-size: 0.875rem;
+            color: #374151;
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.15s;
+            text-decoration: none;
+        }
+        .solutions-option:hover {
+            background: #f3f4f6;
+            color: #1e3a5f;
+        }
+        .solutions-option.active {
+            background: #eff6ff;
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
         /* Language dropdown */
         .lang-dropdown { position: relative; }
         .lang-dropdown-menu {
@@ -275,6 +324,23 @@
                     <a href="index.html#services" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-services">Services</a>
                     <a href="products.html" class="text-sm font-semibold text-[#1e3a5f] transition-colors" data-lang="nav-products">Products</a>
                     
+                    <!-- Solutions dropdown -->
+                    <div class="solutions-dropdown" id="solutionsDropdown">
+                        <button id="solutionsToggle" class="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" aria-haspopup="true">
+                            <span data-lang="nav-solutions">Solutions</span>
+                            <i class="fas fa-chevron-down text-[10px]"></i>
+                        </button>
+                        <div class="solutions-dropdown-menu" id="solutionsMenu" role="menu">
+                            <a href="solutions.html#private-label" class="solutions-option" data-lang="sol-private-label">Private Label</a>
+                            <a href="solutions.html#product-development" class="solutions-option" data-lang="sol-product-development">Product Development</a>
+                            <a href="solutions.html#shipping-solution" class="solutions-option" data-lang="sol-shipping">Shipping Solution</a>
+                            <a href="solutions.html#amazon-fba" class="solutions-option" data-lang="sol-amazon-fba">Amazon FBA</a>
+                            <a href="solutions.html#quality-control" class="solutions-option" data-lang="sol-quality-control">Quality Control</a>
+                            <a href="solutions.html#credit-payment" class="solutions-option" data-lang="sol-credit-payment">Credit Payment Terms</a>
+                            <a href="solutions.html#affiliate-program" class="solutions-option" data-lang="sol-affiliate">Affiliate Program</a>
+                        </div>
+                    </div>
+                    
                     <a href="index.html#why-us" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-why-us">Why Us</a>
                     <a href="index.html#how-it-works" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-how">How It Works</a>
                     <a href="faq.html" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-faq">FAQ</a>
@@ -318,6 +384,23 @@
             <div class="px-4 py-5 space-y-3">
                 <a href="index.html#services" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-services">Services</a>
                 <a href="products.html" class="block py-2 text-sm font-semibold text-[#1e3a5f]" data-lang="nav-products">Products</a>
+                
+                <!-- Mobile Solutions submenu -->
+                <div>
+                    <button id="mobileSolutionsToggle" class="flex items-center justify-between w-full py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]">
+                        <span data-lang="nav-solutions">Solutions</span>
+                        <i class="fas fa-chevron-down text-[10px] transition-transform duration-200" id="mobileSolutionsArrow"></i>
+                    </button>
+                    <div id="mobileSolutionsSubmenu" class="hidden pl-4 pb-2 space-y-1">
+                        <a href="solutions.html#private-label" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-private-label">Private Label</a>
+                        <a href="solutions.html#product-development" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-product-development">Product Development</a>
+                        <a href="solutions.html#shipping-solution" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-shipping">Shipping Solution</a>
+                        <a href="solutions.html#amazon-fba" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-amazon-fba">Amazon FBA</a>
+                        <a href="solutions.html#quality-control" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-quality-control">Quality Control</a>
+                        <a href="solutions.html#credit-payment" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-credit-payment">Credit Payment Terms</a>
+                        <a href="solutions.html#affiliate-program" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sol-affiliate">Affiliate Program</a>
+                    </div>
+                </div>
                 
                 <a href="index.html#why-us" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-why-us">Why Us</a>
                 <a href="index.html#how-it-works" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-how">How It Works</a>
@@ -852,6 +935,14 @@
                     "nav-faq": "FAQ",
                     "nav-contact": "Contact",
                     "nav-cta": "Get Started",
+                    "nav-solutions": "Solutions",
+                    "sol-private-label": "Private Label",
+                    "sol-product-development": "Product Development",
+                    "sol-shipping": "Shipping Solution",
+                    "sol-amazon-fba": "Amazon FBA",
+                    "sol-quality-control": "Quality Control",
+                    "sol-credit-payment": "Credit Payment Terms",
+                    "sol-affiliate": "Affiliate Program",
                     "products-label": "Product Categories",
                     "products-title": "Products We Source for You",
                     "products-desc": "From sports &amp; fitness to electronics — we source thousands of products across 20+ categories with factory-direct pricing.",
@@ -900,6 +991,14 @@
                     "nav-faq": "FAQ",
                     "nav-contact": "Contact Us",
                     "nav-cta": "Get Started",
+                    "nav-solutions": "解决方案",
+                    "sol-private-label": "自有品牌",
+                    "sol-product-development": "产品开发",
+                    "sol-shipping": "运输解决方案",
+                    "sol-amazon-fba": "Amazon FBA",
+                    "sol-quality-control": "质量控制",
+                    "sol-credit-payment": "信用付款条款",
+                    "sol-affiliate": "联盟计划",
                     "products-label": "Product Categories",
                     "products-title": "Products We Source for You",
                     "products-desc": "From sports &amp; fitness to electronics — we source thousands of products across 20+ categories with factory-direct pricing.",
@@ -948,6 +1047,14 @@
                     "nav-faq": "よくある質問",
                     "nav-contact": "お問い合わせ",
                     "nav-cta": "始める",
+                    "nav-solutions": "ソリューション",
+                    "sol-private-label": "プライベートラベル",
+                    "sol-product-development": "製品開発",
+                    "sol-shipping": "配送ソリューション",
+                    "sol-amazon-fba": "Amazon FBA",
+                    "sol-quality-control": "品質管理",
+                    "sol-credit-payment": "与信決済条件",
+                    "sol-affiliate": "アフィリエイトプログラム",
                     "products-label": "製品カテゴリ",
                     "products-title": "あなたのために調達する製品",
                     "products-desc": "スポーツから電子機器まで — 20以上のカテゴリで数千の製品を工場直送価格で調達します。",
@@ -996,6 +1103,14 @@
                     "nav-faq": "자주 묻는 질문",
                     "nav-contact": "문의하기",
                     "nav-cta": "시작하기",
+                    "nav-solutions": "솔루션",
+                    "sol-private-label": "자체 브랜드",
+                    "sol-product-development": "제품 개발",
+                    "sol-shipping": "배송 솔루션",
+                    "sol-amazon-fba": "Amazon FBA",
+                    "sol-quality-control": "품질 관리",
+                    "sol-credit-payment": "신용 결제 조건",
+                    "sol-affiliate": "제휴 프로그램",
                     "products-label": "제품 카테고리",
                     "products-title": "저희가 조달하는 제품",
                     "products-desc": "스포츠부터 전자제품까지 — 20개 이상의 카테고리에서 수천 가지 제품을 공장 직송 가격으로 조달합니다.",
@@ -1044,6 +1159,14 @@
                     "nav-faq": "Preguntas Frecuentes",
                     "nav-contact": "Contacto",
                     "nav-cta": "Comenzar",
+                    "nav-solutions": "Soluciones",
+                    "sol-private-label": "Marca Privada",
+                    "sol-product-development": "Desarrollo de Productos",
+                    "sol-shipping": "Solución de Envío",
+                    "sol-amazon-fba": "Amazon FBA",
+                    "sol-quality-control": "Control de Calidad",
+                    "sol-credit-payment": "Términos de Pago",
+                    "sol-affiliate": "Programa de Afiliados",
                     "products-label": "Categorías de Productos",
                     "products-title": "Productos que Proveemos para Usted",
                     "products-desc": "Desde deportes y fitness hasta electrónicos — proveemos miles de productos en más de 20 categorías con precios directos de fábrica.",
@@ -1125,6 +1248,33 @@
             document.addEventListener('click', function() {
                 document.getElementById('langMenu').classList.remove('open');
             });
+
+            // Solutions dropdown toggle
+            const solutionsToggle = document.getElementById('solutionsToggle');
+            const solutionsMenu = document.getElementById('solutionsMenu');
+            if (solutionsToggle && solutionsMenu) {
+                solutionsToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    document.getElementById('langMenu').classList.remove('open');
+                    solutionsMenu.classList.toggle('open');
+                });
+                document.addEventListener('click', function() {
+                    solutionsMenu.classList.remove('open');
+                });
+            }
+
+            // Mobile solutions submenu toggle
+            const mobileSolutionsToggle = document.getElementById('mobileSolutionsToggle');
+            const mobileSolutionsSubmenu = document.getElementById('mobileSolutionsSubmenu');
+            const mobileSolutionsArrow = document.getElementById('mobileSolutionsArrow');
+            if (mobileSolutionsToggle && mobileSolutionsSubmenu) {
+                mobileSolutionsToggle.addEventListener('click', function() {
+                    mobileSolutionsSubmenu.classList.toggle('hidden');
+                    if (mobileSolutionsArrow) {
+                        mobileSolutionsArrow.style.transform = mobileSolutionsSubmenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                    }
+                });
+            }
 
             (function initLang() {
                 const urlParams = new URLSearchParams(window.location.search);
