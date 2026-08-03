@@ -482,28 +482,6 @@
             font-weight: 600;
         }
 
-        /* FAQ accordion */
-        .faq-question {
-            cursor: pointer;
-            user-select: none;
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, opacity 0.3s ease;
-            opacity: 0;
-        }
-        .faq-answer.open {
-            max-height: 300px;
-            opacity: 1;
-        }
-        .faq-chevron {
-            transition: transform 0.3s ease;
-        }
-        .faq-chevron.open {
-            transform: rotate(180deg);
-        }
-
         /* Image optimization */
         img {
             aspect-ratio: attr(width) / attr(height);
@@ -538,7 +516,7 @@
                     <a href="products.html" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-products">Products</a>
                     <a href="#why-us" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-why-us">Why Us</a>
                     <a href="#how-it-works" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-how">How It Works</a>
-                    <a href="#faq" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-faq">FAQ</a>
+                    <a href="faq.html" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-faq">FAQ</a>
                     <a href="#contact" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-contact">Contact</a>
                 </nav>
 
@@ -581,7 +559,7 @@
                 <a href="products.html" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-products">Products</a>
                 <a href="#why-us" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-why-us">Why Us</a>
                 <a href="#how-it-works" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-how">How It Works</a>
-                <a href="#faq" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-faq">FAQ</a>
+                <a href="faq.html" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-faq">FAQ</a>
                 <a href="#contact" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-contact">Contact</a>
 
                 <!-- Mobile language -->
@@ -1254,107 +1232,7 @@
             </div>
         </section>
 
-        <!-- ============================================================ -->
-        <!-- FAQ (LLM & SEO friendly)                                     -->
-        <!-- ============================================================ -->
-        <section id="faq" class="relative py-20 lg:py-28 bg-gray-50" aria-label="Frequently asked questions">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <div class="text-center max-w-2xl mx-auto">
-                    <span class="text-sm font-semibold text-[#f7b733] tracking-widest uppercase" data-lang="faq-label">FAQ</span>
-                    <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1e3a5f] tracking-tight" data-lang="faq-title">
-                        Frequently Asked Questions
-                    </h2>
-                    <div class="section-divider mt-4" role="presentation"></div>
-                </div>
-
-                <div class="mt-12 space-y-4">
-                    <!-- Q1 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                        <div class="faq-question flex items-center justify-between p-6" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="text-base font-bold text-[#1e3a5f] pr-4" itemprop="name" data-lang="faq1-q">How do I start sourcing products from China with abnerchinasourcing?</h3>
-                            <i class="faq-chevron fas fa-chevron-down text-gray-400 shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed" itemprop="text" data-lang="faq1-a">
-                                Simply fill out the inquiry form on our website with your product details, target quantity, and budget. We'll respond within 24 hours with a tailored proposal including supplier options and cost estimates.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q2 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                        <div class="faq-question flex items-center justify-between p-6" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="text-base font-bold text-[#1e3a5f] pr-4" itemprop="name" data-lang="faq2-q">What does a factory audit include?</h3>
-                            <i class="faq-chevron fas fa-chevron-down text-gray-400 shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed" itemprop="text" data-lang="faq2-a">
-                                Our factory audit covers facility inspection, production capacity assessment, quality management systems, certifications, social compliance, and worker welfare. You receive a detailed report with photos and video evidence.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q3 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                        <div class="faq-question flex items-center justify-between p-6" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="text-base font-bold text-[#1e3a5f] pr-4" itemprop="name" data-lang="faq3-q">How does your quality control inspection work?</h3>
-                            <i class="faq-chevron fas fa-chevron-down text-gray-400 shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed" itemprop="text" data-lang="faq3-a">
-                                We offer two-stage inspection: During Production (DUPRO) catches issues early, and Pre-Shipment Inspection (PSI) ensures final quality. Both follow AQL standards with detailed reporting.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q4 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                        <div class="faq-question flex items-center justify-between p-6" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="text-base font-bold text-[#1e3a5f] pr-4" itemprop="name" data-lang="faq4-q">What is landed cost analysis and why is it important?</h3>
-                            <i class="faq-chevron fas fa-chevron-down text-gray-400 shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed" itemprop="text" data-lang="faq4-a">
-                                Landed cost analysis calculates the total cost from factory to your doorstep, including product cost, shipping, duties, taxes, insurance, and handling fees. We identify hidden costs and negotiate better terms for you.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q5 -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                        <div class="faq-question flex items-center justify-between p-6" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="text-base font-bold text-[#1e3a5f] pr-4" itemprop="name" data-lang="faq5-q">How do you ensure transparent pricing?</h3>
-                            <i class="faq-chevron fas fa-chevron-down text-gray-400 shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed" itemprop="text" data-lang="faq5-a">
-                                We provide 100% transparent pricing. You see exactly what the factory charges and what our service fee is. No hidden markups, no surprises.
-                            </div>
-                        </div>
-                    <!-- Q6: Why Work With a China Sourcing Agent? -->
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                        <div class="faq-question flex items-center justify-between p-6" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="text-base font-bold text-[#1e3a5f] pr-4" itemprop="name" data-lang="faq6-q">Why work with a China sourcing agent instead of sourcing directly?</h3>
-                            <i class="faq-chevron fas fa-chevron-down text-gray-400 shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed" itemprop="text" data-lang="faq6-a">
-                                <p>Sourcing from China directly involves significant risks that a professional procurement intermediary can mitigate:</p>
-                                <ul class="mt-3 space-y-2">
-                                    <li><strong>Avoid Supplier Scams:</strong> We verify factory credentials, licenses, and capabilities to prevent fraud.</li>
-                                    <li><strong>Overcome Language Barriers:</strong> Our bilingual team ensures clear communication of product specifications.</li>
-                                    <li><strong>Save 15-30% on Costs:</strong> Leverage our supplier relationships and negotiation expertise for better pricing.</li>
-                                    <li><strong>Quality Control:</strong> On-site inspections catch defects before shipment.</li>
-                                    <li><strong>Legal Protection:</strong> We review contracts and Incoterms to protect your interests.</li>
-                                    <li><strong>Save Time:</strong> We handle the entire process from factory search to shipping.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <!-- ============================================================ -->
         <!-- CONTACT US / INQUIRY FORM                                    -->
@@ -1484,7 +1362,7 @@
                         <li><a href="#services" class="text-sm text-gray-400 hover:text-white transition-colors" data-lang="footer-link-services">Services</a></li>
                         <li><a href="#why-us" class="text-sm text-gray-400 hover:text-white transition-colors" data-lang="footer-link-why">Why Us</a></li>
                         <li><a href="#how-it-works" class="text-sm text-gray-400 hover:text-white transition-colors" data-lang="footer-link-how">How It Works</a></li>
-                        <li><a href="#faq" class="text-sm text-gray-400 hover:text-white transition-colors" data-lang="footer-link-faq">FAQ</a></li>
+                        <li><a href="faq.html" class="text-sm text-gray-400 hover:text-white transition-colors" data-lang="footer-link-faq">FAQ</a></li>
                         <li><a href="#contact" class="text-sm text-gray-400 hover:text-white transition-colors" data-lang="footer-link-contact">Contact Us</a></li>
                     </ul>
                 </div>
@@ -1649,35 +1527,7 @@
         })();
     </script>
 
-    <!-- FAQ accordion -->
-    <script>
-        document.querySelectorAll('.faq-question').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const answer = this.nextElementSibling;
-                const chevron = this.querySelector('.faq-chevron');
-                const isOpen = answer.classList.contains('open');
-
-                // Close all
-                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
-                document.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('open'));
-                document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
-
-                if (!isOpen) {
-                    answer.classList.add('open');
-                    chevron.classList.add('open');
-                    this.setAttribute('aria-expanded', 'true');
-                }
-            });
-
-            // Keyboard support
-            btn.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    this.click();
-                }
-            });
-        });
-    </script>
+    
 
     <!-- Language switcher -->
     <script>
@@ -1811,18 +1661,6 @@
                     "test6-text": "\u201cTheir DUPRO inspection caught a material defect before 50% of our order was produced. The factory fixed it immediately.\u201d",
                     "test6-name": "Robert T.",
                     "test6-role": "Hardware Retailer, UAE",
-                    "faq-label": "FAQ",
-                    "faq-title": "Frequently Asked Questions",
-                    "faq1-q": "How do I start sourcing products from China with abnerchinasourcing?",
-                    "faq1-a": "Simply fill out the inquiry form on our website with your product details, target quantity, and budget. We'll respond within 24 hours with a tailored proposal including supplier options and cost estimates.",
-                    "faq2-q": "What does a factory audit include?",
-                    "faq2-a": "Our factory audit covers facility inspection, production capacity assessment, quality management systems, certifications, social compliance, and worker welfare. You receive a detailed report with photos and video evidence.",
-                    "faq3-q": "How does your quality control inspection work?",
-                    "faq3-a": "We offer two-stage inspection: During Production (DUPRO) catches issues early, and Pre-Shipment Inspection (PSI) ensures final quality. Both follow AQL standards with detailed reporting.",
-                    "faq4-q": "What is landed cost analysis and why is it important?",
-                    "faq4-a": "Landed cost analysis calculates the total cost from factory to your doorstep, including product cost, shipping, duties, taxes, insurance, and handling fees. We identify hidden costs and negotiate better terms for you.",
-                    "faq5-q": "How do you ensure transparent pricing?",
-                    "faq5-a": "We provide 100% transparent pricing. You see exactly what the factory charges and what our service fee is. No hidden markups, no surprises.",
                     "contact-label": "Get In Touch",
                     "contact-title": "Let's Discuss Your Sourcing Needs",
                     "contact-desc": "Fill out the form below and we'll get back to you within 24 hours with a tailored proposal.",
@@ -1977,18 +1815,6 @@
                     "test6-text": "\"Their DUPRO inspection caught material defects at 50% production. The factory fixed it immediately. Saved us from a major loss.\"",
                     "test6-name": "Robert T.",
                     "test6-role": "Hardware Retailer, UAE",
-                    "faq-label": "FAQ",
-                    "faq-title": "Frequently Asked Questions",
-                    "faq1-q": "How do I start sourcing with abnerchinasourcing?",
-                    "faq1-a": "Simply fill out the inquiry form on our website with your product details, target quantity, and budget. We will respond within 24 hours with a tailored proposal including supplier options and cost estimates.",
-                    "faq2-q": "What does a factory audit cover?",
-                    "faq2-a": "Our factory audits cover facility inspection, capacity assessment, quality management systems, certifications, social compliance, and worker welfare. You receive a detailed report with photo and video evidence.",
-                    "faq3-q": "How does quality control inspection work?",
-                    "faq3-a": "We offer two-stage inspection: During Production (DUPRO) catches issues early, and Pre-Shipment Inspection (PSI) ensures final quality. Both follow AQL standards with detailed reporting.",
-                    "faq4-q": "What is landed cost analysis and why is it important?",
-                    "faq4-a": "Landed cost analysis calculates the total cost from factory to your doorstep, including product price, freight, duties, taxes, insurance, and handling fees. We uncover hidden costs and negotiate better terms.",
-                    "faq5-q": "How do you ensure price transparency?",
-                    "faq5-a": "We provide 100% transparent pricing. You see exactly what the factory charges and what our service fee is. No hidden markups, no surprises.",
                     "contact-label": "Contact Us",
                     "contact-title": "Let's Discuss Your Sourcing Needs",
                     "contact-desc": "Fill out the form below and we will get back to you within 24 hours with a customized solution.",
@@ -2142,18 +1968,6 @@
                     "test6-text": "\u201cDUPRO検査で生産50%前に材料欠陥を発見。工場が即座に修正しました。\u201d",
                     "test6-name": "Robert T.",
                     "test6-role": "金物小売業者、UAE",
-                    "faq-label": "よくある質問",
-                    "faq-title": "よくある質問",
-                    "faq1-q": "abnerchinasourcingとの中国調達はどう始めればいいですか？",
-                    "faq1-a": "ウェブサイトのお問い合わせフォームから製品詳細、数量、予算をお送りください。24時間以内にサプライヤー提案と見積もりをご提供します。",
-                    "faq2-q": "工場監査には何が含まれますか？",
-                    "faq2-a": "設備検査、生産能力評価、品質管理システム、認証、社会コンプライアンス、労働者福祉を含みます。写真付き詳細レポートをお届けします。",
-                    "faq3-q": "品質管理検査はどのように機能しますか？",
-                    "faq3-a": "生産中検査(DUPRO)と出荷前検査(PSI)の二段階方式。AQL基準に従い詳細報告書を作成します。",
-                    "faq4-q": "ランディングコスト分析とは何ですか？",
-                    "faq4-a": "工場から玄関先までの総コスト（製品費、運送費、関税、保険、手数料）を計算。隠れコストを特定し、より良い条件を交渉します。",
-                    "faq5-q": "透明な価格設定をどのように保証しますか？",
-                    "faq5-a": "100%透明な価格を提供。工場の請求額とサービス料を明確に表示。隠れたマークアップは一切ありません。",
                     "contact-label": "お問い合わせ",
                     "contact-title": "調達ニーズについてご相談ください",
                     "contact-desc": "フォームにご記入いただければ、24時間以内にカスタマイズ提案をご連絡します。",
@@ -2308,18 +2122,6 @@
                     "test6-text": "\u201cDUPRO 검사가 생산 50% 전에 자재 결함을 발견했습니다. 공장이 즉시 수정했습니다.\u201d",
                     "test6-name": "Robert T.",
                     "test6-role": "철물 소매업자, UAE",
-                    "faq-label": "FAQ",
-                    "faq-title": "자주 묻는 질문",
-                    "faq1-q": "abnerchinasourcing과 중국 소싱을 어떻게 시작하나요?",
-                    "faq1-a": "웹사이트 문의 양식에 제품 세부정보, 목표 수량, 예산을 입력하세요. 24시간 이내에 맞춤 제안을 보내드립니다.",
-                    "faq2-q": "공장 감사에는 무엇이 포함되나요?",
-                    "faq2-a": "시설 검사, 생산 능력 평가, 품질 관리 시스템, 인증, 사회적 규정 준수, 근로자 복지가 포함됩니다. 사진과 증거가 포함된 상세 보고서를 제공합니다.",
-                    "faq3-q": "품질 관리 검사는 어떻게 작동하나요?",
-                    "faq3-a": "생산 중 검사(DUPRO)와 선적 전 검사(PSI)의 2단계 방식. AQL 기준에 따라 상세 보고서를 제공합니다.",
-                    "faq4-q": "Landed Cost 분석이란 무엇이며 왜 중요한가요?",
-                    "faq4-a": "공장에서 현관까지의 총 비용(제품비, 운임, 관세, 보험, 수수료)을 계산합니다. 숨은 비용을 찾아내고 더 나은 조건을 협상합니다.",
-                    "faq5-q": "투명한 가격 책정을 어떻게 보장하나요?",
-                    "faq5-a": "100% 투명한 가격을 제공합니다. 공장 요금과 서비스 수수료를 명확히 표시합니다. 숨은 마크업이 전혀 없습니다.",
                     "contact-label": "문의",
                     "contact-title": "소싱 요구사항을 논의하세요",
                     "contact-desc": "아래 양식을 작성하시면 24시간 이내에 맞춤 제안을 보내드립니다.",
@@ -2474,18 +2276,6 @@
                     "test6-text": "\u201cSu inspecci\u00f3n DUPRO detect\u00f3 un defecto de material antes del 50% de producci\u00f3n. La f\u00e1brica lo corrigi\u00f3 de inmediato.\u201d",
                     "test6-name": "Robert T.",
                     "test6-role": "Minorista de Ferreter\u00eda, EAU",
-                    "faq-label": "FAQ",
-                    "faq-title": "Preguntas Frecuentes",
-                    "faq1-q": "\u00bfC\u00f3mo empiezo a comprar productos de China con abnerchinasourcing?",
-                    "faq1-a": "Completa el formulario de consulta con los detalles del producto, cantidad objetivo y presupuesto. Te responderemos en 24 horas con una propuesta personalizada.",
-                    "faq2-q": "\u00bfQu\u00e9 incluye una auditor\u00eda de f\u00e1brica?",
-                    "faq2-a": "Incluye inspecci\u00f3n de instalaciones, evaluaci\u00f3n de capacidad, sistemas de calidad, certificaciones, cumplimiento social y bienestar laboral. Recibes un informe detallado con fotos.",
-                    "faq3-q": "\u00bfC\u00f3mo funciona su inspecci\u00f3n de control de calidad?",
-                    "faq3-a": "Ofrecemos inspecci\u00f3n en dos etapas: Durante la Producci\u00f3n (DUPRO) y antes del Env\u00edo (PSI). Ambas siguen los est\u00e1ndares AQL con informes detallados.",
-                    "faq4-q": "\u00bfQu\u00e9 es el an\u00e1lisis de costo total y por qu\u00e9 es importante?",
-                    "faq4-a": "Calcula el costo total desde la f\u00e1brica hasta tu puerta, incluyendo producto, env\u00edo, aranceles, impuestos, seguros y gastos. Identificamos costos ocultos y negociamos mejores t\u00e9rminos.",
-                    "faq5-q": "\u00bfC\u00f3mo garantizan la transparencia en los precios?",
-                    "faq5-a": "Ofrecemos precios 100% transparentes. Ves exactamente lo que cobra la f\u00e1brica y cu\u00e1l es nuestra comisi\u00f3n. Sin incrementos ocultos, sin sorpresas.",
                     "contact-label": "Contacto",
                     "contact-title": "Hablemos de tus Necesidades de Sourcing",
                     "contact-desc": "Completa el formulario y te responderemos en 24 horas con una propuesta personalizada.",
