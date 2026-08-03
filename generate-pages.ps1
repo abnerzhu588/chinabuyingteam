@@ -18,7 +18,7 @@ $nav = @'
                     <a href="index.html#why-us" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-why-us">Why Us</a>
                     <a href="index.html#how-it-works" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-how">How It Works</a>
                     <a href="faq.html" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-faq">FAQ</a>
-                    <a href="index.html#contact" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-contact">Contact</a>
+                    <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-contact">Contact</a>
                 </nav>
                 <div class="hidden lg:flex items-center gap-3">
                     <div class="lang-dropdown" id="langDropdown">
@@ -35,7 +35,7 @@ $nav = @'
                             <button class="lang-option" data-lang-code="es" role="menuitem">Español</button>
                         </div>
                     </div>
-                    <a href="index.html#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white btn-primary shadow-md">
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white btn-primary shadow-md">
                         <span data-lang="nav-cta">Get Started</span>
                         <i class="fas fa-arrow-right text-xs"></i>
                     </a>
@@ -53,7 +53,7 @@ $nav = @'
                 <a href="index.html#why-us" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-why-us">Why Us</a>
                 <a href="index.html#how-it-works" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-how">How It Works</a>
                 <a href="faq.html" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-faq">FAQ</a>
-                <a href="index.html#contact" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-contact">Contact</a>
+                <a href="contact.html" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-contact">Contact</a>
                 <div class="pt-2 border-t border-gray-100">
                     <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Language</p>
                     <div class="flex flex-wrap gap-2">
@@ -65,7 +65,7 @@ $nav = @'
                     </div>
                 </div>
                 <div class="pt-3">
-                    <a href="index.html#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white btn-primary shadow-md">
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white btn-primary shadow-md">
                         <span data-lang="nav-cta">Get Started</span>
                         <i class="fas fa-arrow-right text-xs"></i>
                     </a>
@@ -99,7 +99,7 @@ $footer = @'
                         <li><a href="index.html#why-us" class="text-sm text-gray-400 hover:text-white transition-colors" data-lang="footer-link-why">Why Us</a></li>
                         <li><a href="index.html#how-it-works" class="text-sm text-gray-400 hover:text-white transition-colors" data-lang="footer-link-how">How It Works</a></li>
                         <li><a href="faq.html" class="text-sm text-gray-400 hover:text-white transition-colors" data-lang="footer-link-faq">FAQ</a></li>
-                        <li><a href="index.html#contact" class="text-sm text-gray-400 hover:text-white transition-colors" data-lang="footer-link-contact">Contact Us</a></li>
+                        <li><a href="contact.html" class="text-sm text-gray-400 hover:text-white transition-colors" data-lang="footer-link-contact">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
@@ -411,7 +411,7 @@ $ctaSection = @'
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Ready to Source {CTANAME}?</h2>
             <p class="mt-4 text-gray-300 text-lg">Contact us today and get a free quote from our team of sourcing experts.</p>
-            <a href="index.html#contact" class="mt-8 inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-base font-bold text-[#1e3a5f] bg-[#f7b733] hover:bg-[#e5a52e] transition-all shadow-lg shadow-black/20">
+            <a href="contact.html" class="mt-8 inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-base font-bold text-[#1e3a5f] bg-[#f7b733] hover:bg-[#e5a52e] transition-all shadow-lg shadow-black/20">
                 Contact Us Now <i class="fas fa-arrow-right text-sm"></i>
             </a>
         </div>
@@ -428,7 +428,7 @@ function New-Card {
                     </div>
                     <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]">$Title</h3>
                     <p class="mt-2 text-sm text-gray-500 leading-relaxed">$Desc</p>
-                    <a href="index.html#contact" class="mt-4 inline-flex items-center gap-2 px-5 py-2.5 bg-[#f7b733] text-white text-sm font-semibold rounded-xl hover:bg-[#e5a52e] transition-all shadow-sm">
+                    <a href="contact.html" class="mt-4 inline-flex items-center gap-2 px-5 py-2.5 bg-[#f7b733] text-white text-sm font-semibold rounded-xl hover:bg-[#e5a52e] transition-all shadow-sm">
                         Get A Quote <i class="fas fa-arrow-right text-xs"></i>
                     </a>
                 </article>
