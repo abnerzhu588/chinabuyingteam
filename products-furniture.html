@@ -156,7 +156,50 @@
     background: #f3f4f6;
     color: #1e3a5f;
 }
-.solutions-option.active {
+/* Services dropdown */
+.services-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+.services-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: all 0.2s ease;
+    z-index: 60;
+    overflow: hidden;
+}
+.services-dropdown-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.services-option {
+    padding: 10px 16px;
+    font-size: 0.875rem;
+    color: #374151;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s;
+    text-decoration: none;
+}
+.services-option:hover {
+    background: #f3f4f6;
+    color: #1e3a5f;
+}
+.services-option.active {
     background: #eff6ff;
     color: #1e3a5f;
     font-weight: 600;
@@ -177,7 +220,18 @@
                     <img src="logo.png" alt="abnerchinasourcing - China Sourcing Agent" class="h-20 w-auto" width="160" height="80" decoding="async" fetchpriority="high" />
                 </a>
                 <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
-                    <a href="index.html#services" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-services">Services</a>
+                    <div class="services-dropdown" id="servicesDropdown">
+                        <button id="servicesToggle" class="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" aria-haspopup="true">
+                            <span data-lang="nav-services">Services</span>
+                            <i class="fas fa-chevron-down text-[10px]"></i>
+                        </button>
+                        <div class="services-dropdown-menu" id="servicesMenu" role="menu">
+                            <a href="services.html#sourcing-purchasing" class="services-option" data-lang="sv-sourcing">Sourcing &amp; Purchasing</a>
+                            <a href="services.html#dropshipping" class="services-option" data-lang="sv-dropshipping">Dropshipping Service</a>
+                            <a href="services.html#photos-designs" class="services-option" data-lang="sv-photos">Photos &amp; Designs</a>
+                            <a href="services.html#extra-service" class="services-option" data-lang="sv-extra">Extra Service</a>
+                        </div>
+                    </div>
                     <a href="products.html" class="text-sm font-semibold text-[#1e3a5f] transition-colors" data-lang="nav-products">Products</a>
                     <div class="solutions-dropdown" id="solutionsDropdown">
                         <button id="solutionsToggle" class="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" aria-haspopup="true">
@@ -225,7 +279,18 @@
         </div>
         <div id="mobileMenu" class="mobile-menu lg:hidden bg-white border-t border-gray-100">
             <div class="px-4 py-5 space-y-3">
-                <a href="index.html#services" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-services">Services</a>
+                <div>
+                    <button id="mobileServicesToggle" class="flex items-center justify-between w-full py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]">
+                        <span data-lang="nav-services">Services</span>
+                        <i class="fas fa-chevron-down text-[10px] transition-transform duration-200" id="mobileServicesArrow"></i>
+                    </button>
+                    <div id="mobileServicesSubmenu" class="hidden pl-4 pb-2 space-y-1">
+                        <a href="services.html#sourcing-purchasing" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sv-sourcing">Sourcing &amp; Purchasing</a>
+                        <a href="services.html#dropshipping" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sv-dropshipping">Dropshipping Service</a>
+                        <a href="services.html#photos-designs" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sv-photos">Photos &amp; Designs</a>
+                        <a href="services.html#extra-service" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sv-extra">Extra Service</a>
+                    </div>
+                </div>
                 <a href="products.html" class="block py-2 text-sm font-semibold text-[#1e3a5f]" data-lang="nav-products">Products</a>
                 <div>
                     <button id="mobileSolutionsToggle" class="flex items-center justify-between w-full py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]">
@@ -434,14 +499,14 @@
         (function() {
             const translations = {
                 en: {
-                    "nav-services": "Services","nav-products": "Products","nav-solutions": "Solutions","sol-private-label": "Private Label","sol-product-development": "Product Development","sol-shipping": "Shipping Solution","sol-amazon-fba": "Amazon FBA","sol-quality-control": "Quality Control","sol-credit-payment": "Credit Payment Terms","sol-affiliate": "Affiliate Program","nav-agent": "Why Agent","nav-how": "How It Works","nav-faq": "FAQ","nav-contact": "Contact","nav-cta": "Get Started",
+                    "nav-services": "Services","sv-sourcing": "Sourcing & Purchasing","sv-dropshipping": "Dropshipping Service","sv-photos": "Photos & Designs","sv-extra": "Extra Service","nav-products": "Products","nav-solutions": "Solutions","sol-private-label": "Private Label","sol-product-development": "Product Development","sol-shipping": "Shipping Solution","sol-amazon-fba": "Amazon FBA","sol-quality-control": "Quality Control","sol-credit-payment": "Credit Payment Terms","sol-affiliate": "Affiliate Program","nav-agent": "Why Agent","nav-how": "How It Works","nav-faq": "FAQ","nav-contact": "Contact","nav-cta": "Get Started",
                     "footer-desc": "Your trusted sourcing, quality control, and logistics partner in China. We help overseas buyers source products with confidence.",
                     "footer-links-title": "Quick Links","footer-link-services": "Services","footer-link-how": "How It Works","footer-link-faq": "FAQ","footer-link-contact": "Contact Us",
                     "footer-services-title": "Services","footer-service1": "Factory Audit","footer-service2": "Quality Control","footer-service3": "Cost Analysis","footer-service4": "Price Negotiation",
                     "footer-contact-title": "Contact","footer-address": "Shenzhen, Guangdong, China","footer-hours": "Mon\u2013Sat 9:00\u201324:00 (CST)","footer-copyright": "\u00a9 2026 abnerchinasourcing. All rights reserved.","footer-privacy": "Privacy Policy","footer-terms": "Terms of Service"
                 },
                 zh: {
-                    "nav-services": "Services","nav-products": "Products","nav-solutions": "\u89e3\u51b3\u65b9\u6848","sol-private-label": "\u81ea\u6709\u54c1\u724c","sol-product-development": "\u4ea7\u54c1\u5f00\u53d1","sol-shipping": "\u8fd0\u8f93\u89e3\u51b3\u65b9\u6848","sol-amazon-fba": "Amazon FBA","sol-quality-control": "\u8d28\u91cf\u63a7\u5236","sol-credit-payment": "\u4fe1\u7528\u4ed8\u6b3e\u6761\u6b3e","sol-affiliate": "\u8054\u76df\u8ba1\u5212","nav-agent": "Why Agent","nav-how": "How It Works","nav-faq": "FAQ","nav-contact": "Contact Us","nav-cta": "Get Started",
+                    "nav-services": "Services","sv-sourcing": "Sourcing & Purchasing","sv-dropshipping": "Dropshipping Service","sv-photos": "Photos & Designs","sv-extra": "Extra Service","nav-products": "Products","nav-solutions": "\u89e3\u51b3\u65b9\u6848","sol-private-label": "\u81ea\u6709\u54c1\u724c","sol-product-development": "\u4ea7\u54c1\u5f00\u53d1","sol-shipping": "\u8fd0\u8f93\u89e3\u51b3\u65b9\u6848","sol-amazon-fba": "Amazon FBA","sol-quality-control": "\u8d28\u91cf\u63a7\u5236","sol-credit-payment": "\u4fe1\u7528\u4ed8\u6b3e\u6761\u6b3e","sol-affiliate": "\u8054\u76df\u8ba1\u5212","nav-agent": "Why Agent","nav-how": "How It Works","nav-faq": "FAQ","nav-contact": "Contact Us","nav-cta": "Get Started",
                     "footer-desc": "Your trusted sourcing, quality control, and logistics partner in China. We help overseas buyers source products with confidence.",
                     "footer-links-title": "Quick Links","footer-link-services": "Services","footer-link-how": "How It Works","footer-link-faq": "FAQ","footer-link-contact": "Contact Us",
                     "footer-services-title": "Services","footer-service1": "Factory Audit","footer-service2": "Quality Control","footer-service3": "Cost Analysis","footer-service4": "Price Negotiation",
@@ -462,7 +527,7 @@
                     "footer-contact-title": "\uc5f0\ub77d\ucc98","footer-address": "\uc911\uad6d \uad11\ub465\uc131 \uc2ec\ucc9c\uc2dc","footer-hours": "\uc6d4\u2013\ud1a0 9:00\u201324:00 (CST)","footer-copyright": "\u00a9 2026 abnerchinasourcing. All rights reserved.","footer-privacy": "\uac1c\uc778\uc815\ubcf4\ucc98\ub9ac\ubc29\uce68","footer-terms": "\uc774\uc6a9\uc57d\uad00"
                 },
                 es: {
-                    "nav-services": "Servicios","nav-products": "Productos","nav-solutions": "Soluciones","sol-private-label": "Marca Privada","sol-product-development": "Desarrollo de Productos","sol-shipping": "Soluci\u00f3n de Env\u00edo","sol-amazon-fba": "Amazon FBA","sol-quality-control": "Control de Calidad","sol-credit-payment": "T\u00e9rminos de Pago","sol-affiliate": "Programa de Afiliados","nav-agent": "Por qu\u00e9 un agente","nav-how": "Proceso","nav-faq": "Preguntas Frecuentes","nav-contact": "Contacto","nav-cta": "Comenzar",
+                    "nav-services": "Servicios","sv-sourcing": "Sourcing y Compras","sv-dropshipping": "Servicio de Dropshipping","sv-photos": "Fotos y Diseños","sv-extra": "Servicio Extra","nav-products": "Productos","nav-solutions": "Soluciones","sol-private-label": "Marca Privada","sol-product-development": "Desarrollo de Productos","sol-shipping": "Soluci\u00f3n de Env\u00edo","sol-amazon-fba": "Amazon FBA","sol-quality-control": "Control de Calidad","sol-credit-payment": "T\u00e9rminos de Pago","sol-affiliate": "Programa de Afiliados","nav-agent": "Por qu\u00e9 un agente","nav-how": "Proceso","nav-faq": "Preguntas Frecuentes","nav-contact": "Contacto","nav-cta": "Comenzar",
                     "footer-desc": "Su socio de confianza en China para abastecimiento, control de calidad y log\u00edstica. Ayudamos a compradores internacionales a obtener productos con confianza.",
                     "footer-links-title": "Enlaces R\u00e1pidos","footer-link-services": "Servicios","footer-link-how": "Proceso","footer-link-faq": "Preguntas Frecuentes","footer-link-contact": "Contacto",
                     "footer-services-title": "Servicios","footer-service1": "Auditor\u00eda de F\u00e1brica","footer-service2": "Control de Calidad","footer-service3": "An\u00e1lisis de Costos","footer-service4": "Negociaci\u00f3n de Precios",
@@ -482,6 +547,20 @@
                 document.getElementById('langMenu').classList.remove('open');
             }
             document.getElementById('langToggle').addEventListener('click', function(e) { e.stopPropagation(); document.getElementById('langMenu').classList.toggle('open'); });
+            // Services dropdown toggle (Desktop)
+            const servicesToggle = document.getElementById('servicesToggle');
+            const servicesMenu = document.getElementById('servicesMenu');
+            if (servicesToggle && servicesMenu) {
+                servicesToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    document.getElementById('langMenu').classList.remove('open');
+                    servicesMenu.classList.toggle('open');
+                });
+                document.addEventListener('click', function() {
+                    servicesMenu.classList.remove('open');
+                });
+            }
+
             // Solutions dropdown toggle
             const solutionsToggle = document.getElementById('solutionsToggle');
             const solutionsMenu = document.getElementById('solutionsMenu');
@@ -493,6 +572,19 @@
                 });
                 document.addEventListener('click', function() {
                     solutionsMenu.classList.remove('open');
+                });
+            }
+
+            // Mobile services submenu toggle
+            const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+            const mobileServicesSubmenu = document.getElementById('mobileServicesSubmenu');
+            const mobileServicesArrow = document.getElementById('mobileServicesArrow');
+            if (mobileServicesToggle && mobileServicesSubmenu) {
+                mobileServicesToggle.addEventListener('click', function() {
+                    mobileServicesSubmenu.classList.toggle('hidden');
+                    if (mobileServicesArrow) {
+                        mobileServicesArrow.style.transform = mobileServicesSubmenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                    }
                 });
             }
 

@@ -484,6 +484,65 @@
             font-weight: 600;
         }
 
+        /* Services dropdown */
+        .services-dropdown {
+            position: relative;
+            cursor: pointer;
+        }
+        .services-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.2s ease;
+            z-index: 60;
+            overflow: hidden;
+        }
+        .services-dropdown-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .services-option {
+            padding: 10px 16px;
+            font-size: 0.875rem;
+            color: #374151;
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.15s;
+            text-decoration: none;
+        }
+        .services-option:hover {
+            background: #f3f4f6;
+            color: #1e3a5f;
+        }
+        .services-option.active {
+            background: #eff6ff;
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
+        /* Mobile services submenu */
+        .mobile-services-submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .mobile-services-submenu.open {
+            max-height: 400px;
+        }
+
         /* Language switcher */
         .lang-dropdown {
             position: relative;
@@ -561,7 +620,18 @@
 
                 <!-- Desktop Nav -->
                 <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
-                    <a href="#services" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-services">Services</a>
+                    <div class="services-dropdown" id="servicesDropdown">
+                        <button id="servicesToggle" class="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" aria-haspopup="true">
+                            <span data-lang="nav-services">Services</span>
+                            <i class="fas fa-chevron-down text-[10px]"></i>
+                        </button>
+                        <div class="services-dropdown-menu" id="servicesMenu" role="menu">
+                            <a href="services.html#sourcing-purchasing" class="services-option" data-lang="sv-sourcing">Sourcing &amp; Purchasing</a>
+                            <a href="services.html#dropshipping" class="services-option" data-lang="sv-dropshipping">Dropshipping Service</a>
+                            <a href="services.html#photos-designs" class="services-option" data-lang="sv-photos">Photos &amp; Designs</a>
+                            <a href="services.html#extra-service" class="services-option" data-lang="sv-extra">Extra Service</a>
+                        </div>
+                    </div>
                     <a href="products.html" class="text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" data-lang="nav-products">Products</a>
                     <div class="solutions-dropdown" id="solutionsDropdown">
                         <button id="solutionsToggle" class="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#1e3a5f] transition-colors" aria-haspopup="true">
@@ -618,7 +688,20 @@
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="mobile-menu lg:hidden bg-white border-t border-gray-100">
             <div class="px-4 py-5 space-y-3">
-                <a href="#services" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-services">Services</a>
+                <div>
+                    <button id="mobileServicesToggle" class="flex items-center justify-between w-full py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]">
+                        <span data-lang="nav-services">Services</span>
+                        <i id="mobileServicesIcon" class="fas fa-chevron-down text-[10px] transition-transform"></i>
+                    </button>
+                    <div id="mobileServicesSubmenu" class="mobile-services-submenu pl-4">
+                        <div class="py-1 space-y-1">
+                            <a href="services.html#sourcing-purchasing" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sv-sourcing">Sourcing &amp; Purchasing</a>
+                            <a href="services.html#dropshipping" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sv-dropshipping">Dropshipping Service</a>
+                            <a href="services.html#photos-designs" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sv-photos">Photos &amp; Designs</a>
+                            <a href="services.html#extra-service" class="block py-1.5 text-sm text-gray-500 hover:text-[#1e3a5f]" data-lang="sv-extra">Extra Service</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="products.html" class="block py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]" data-lang="nav-products">Products</a>
                 <div>
                     <button id="mobileSolutionsToggle" class="flex items-center justify-between w-full py-2 text-sm font-medium text-gray-600 hover:text-[#1e3a5f]">
@@ -1535,6 +1618,10 @@
                     "sol-quality-control": "Quality Control",
                     "sol-credit-payment": "Credit Payment Terms",
                     "sol-affiliate": "Affiliate Program",
+                    "sv-sourcing": "Sourcing & Purchasing",
+                    "sv-dropshipping": "Dropshipping Service",
+                    "sv-photos": "Photos & Designs",
+                    "sv-extra": "Extra Service",
                     "nav-agent": "Why Agent",
                     "nav-how": "How It Works",
                     "nav-faq": "FAQ",
@@ -1719,6 +1806,10 @@
                     "sol-quality-control": "质量控制",
                     "sol-credit-payment": "信用付款条款",
                     "sol-affiliate": "联盟计划",
+                    "sv-sourcing": "Sourcing & Purchasing",
+                    "sv-dropshipping": "Dropshipping Service",
+                    "sv-photos": "Photos & Designs",
+                    "sv-extra": "Extra Service",
                     "nav-agent": "Why Agent",
                     "nav-how": "Process",
                     "nav-faq": "FAQ",
@@ -1878,6 +1969,10 @@
                     "sol-quality-control": "品質管理",
                     "sol-credit-payment": "与信決済条件",
                     "sol-affiliate": "アフィリエイトプログラム",
+                    "sv-sourcing": "ソーシングと購入",
+                    "sv-dropshipping": "ドロップシッピングサービス",
+                    "sv-photos": "写真とデザイン",
+                    "sv-extra": "追加サービス",
                     "nav-agent": "代理店を選ぶ理由",
                     "nav-how": "流れ",
                     "nav-faq": "よくある質問",
@@ -2038,6 +2133,10 @@
                     "sol-quality-control": "품질 관리",
                     "sol-credit-payment": "신용 결제 조건",
                     "sol-affiliate": "제휴 프로그램",
+                    "sv-sourcing": "소싱 및 구매",
+                    "sv-dropshipping": "드롭시핑 서비스",
+                    "sv-photos": "사진 및 디자인",
+                    "sv-extra": "추가 서비스",
                     "nav-agent": "에이전트 이유",
                     "nav-how": "프로세스",
                     "nav-faq": "FAQ",
@@ -2198,6 +2297,10 @@
                     "sol-quality-control": "Control de Calidad",
                     "sol-credit-payment": "Términos de Pago",
                     "sol-affiliate": "Programa de Afiliados",
+                    "sv-sourcing": "Sourcing y Compras",
+                    "sv-dropshipping": "Servicio de Dropshipping",
+                    "sv-photos": "Fotos y Diseños",
+                    "sv-extra": "Servicio Extra",
                     "nav-agent": "Por Qu\u00e9 Agente",
                     "nav-how": "C\u00f3mo Funciona",
                     "nav-faq": "FAQ",
@@ -2375,6 +2478,19 @@
                 document.getElementById('langMenu').classList.toggle('open');
             });
 
+            // Services dropdown toggle (Desktop)
+            const servicesToggle = document.getElementById('servicesToggle');
+            const servicesMenu = document.getElementById('servicesMenu');
+            if (servicesToggle && servicesMenu) {
+                servicesToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    servicesMenu.classList.toggle('open');
+                });
+                document.addEventListener('click', function() {
+                    servicesMenu.classList.remove('open');
+                });
+            }
+
             // Solutions dropdown toggle
             const solutionsToggle = document.getElementById('solutionsToggle');
             const solutionsMenu = document.getElementById('solutionsMenu');
@@ -2386,6 +2502,19 @@
                 });
                 document.addEventListener('click', function() {
                     solutionsMenu.classList.remove('open');
+                });
+            }
+
+            // Mobile services submenu toggle
+            const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+            const mobileServicesSubmenu = document.getElementById('mobileServicesSubmenu');
+            const mobileServicesIcon = document.getElementById('mobileServicesIcon');
+            if (mobileServicesToggle && mobileServicesSubmenu) {
+                mobileServicesToggle.addEventListener('click', function() {
+                    mobileServicesSubmenu.classList.toggle('open');
+                    if (mobileServicesIcon) {
+                        mobileServicesIcon.style.transform = mobileServicesSubmenu.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+                    }
                 });
             }
 
