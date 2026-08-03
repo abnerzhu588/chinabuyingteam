@@ -528,7 +528,7 @@
             <div class="flex items-center justify-between h-16 lg:h-20">
 
                 <!-- Brand -->
-                <a href="#" class="flex items-center gap-2.5 group" aria-label="abnerchinasourcing home">
+                <a href="index.html" class="flex items-center gap-2.5 group" aria-label="abnerchinasourcing home">
                     <img src="logo.png" alt="abnerchinasourcing - China Sourcing Agent" class="h-20 w-auto" width="160" height="80" decoding="async" fetchpriority="high" />
                 </a>
 
@@ -611,128 +611,113 @@
         <!-- ============================================================ -->
         <!-- HERO BANNER                                                  -->
         <!-- ============================================================ -->
-        <section id="hero" class="relative min-h-screen flex items-center overflow-hidden pt-16 lg:pt-20" aria-label="Hero banner">
-            <!-- Background -->
-            <div class="absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80"
-                     alt="Shipping containers and logistics at port in China"
-                     class="w-full h-full object-cover"
-                     loading="eager"
-                     fetchpriority="high" />
-                <div class="hero-overlay absolute inset-0"></div>
-            </div>
+        <section id="hero" class="relative overflow-hidden pt-16 lg:pt-20" aria-label="Hero banner">
+            <!-- Background gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f] to-[#2d6a9f]" aria-hidden="true"></div>
+            <!-- Subtle pattern overlay -->
+            <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 25% 25%, #ffffff 1px, transparent 1px); background-size: 40px 40px;" aria-hidden="true"></div>
 
-            <!-- Floating shapes -->
-            <div class="floating-shape w-72 h-72 bg-[#f7b733] top-10 -left-20" aria-hidden="true"></div>
-            <div class="floating-shape w-96 h-96 bg-[#2d6a9f] bottom-20 -right-24" aria-hidden="true"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
-            <!-- Content -->
-            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-                <div class="max-w-3xl">
+                    <!-- Left: Text content -->
+                    <div class="flex-1 max-w-2xl">
 
-                    <!-- Badge -->
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs font-medium mb-6">
-                        <i class="fas fa-badge-check text-[#f7b733]" aria-hidden="true"></i>
-                        <span data-lang="hero-badge">Trusted by 500+ buyers worldwide</span>
-                    </div>
-
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
-                        <span data-lang="hero-title-part1">Your Trusted</span>
-                        <span class="gradient-text" data-lang="hero-title-part2">China Procurement Intermediary</span>
-                        <span data-lang="hero-title-part3">&amp; Sourcing Agent</span>
-                    </h1>
-
-                    <p class="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl" data-lang="hero-sub">
-                        We act as your dedicated procurement intermediary in China — verifying factories, controlling quality, negotiating prices, and managing logistics. 100% transparent, zero hidden fees, and a local team on the ground.
-                    </p>
-
-                    <!-- CTA buttons -->
-                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                        <a href="#contact"
-                           class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-base font-bold text-white btn-accent shadow-lg shadow-orange-500/20">
-                            <span data-lang="hero-cta1">Get a Free Quote</span>
-                            <i class="fas fa-paper-plane text-sm" aria-hidden="true"></i>
-                        </a>
-                        <a href="#how-it-works"
-                           class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-base font-semibold text-white bg-white/10 backdrop-blur-sm border border-white/25 hover:bg-white/20 transition-colors">
-                            <i class="fas fa-play-circle text-sm" aria-hidden="true"></i>
-                            <span data-lang="hero-cta2">See How It Works</span>
-                        </a>
-                    </div>
-
-                    <!-- Trust indicators -->
-                    <div class="mt-12 flex flex-wrap items-center gap-8 text-white/60 text-sm" aria-label="Trust indicators">
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-shield-halved text-[#f7b733]" aria-hidden="true"></i>
-                            <span data-lang="hero-trust1">Secure &amp; Insured</span>
+                        <!-- Badge -->
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs font-medium mb-6">
+                            <i class="fas fa-badge-check text-[#f7b733]" aria-hidden="true"></i>
+                            <span data-lang="hero-badge">Trusted by 500+ buyers worldwide</span>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-clock text-[#f7b733]" aria-hidden="true"></i>
-                            <span data-lang="hero-trust2">48h Response Time</span>
+
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
+                            <span data-lang="hero-title-part1">We Make it Easy to</span>
+                            <span class="text-[#f7b733]" data-lang="hero-title-part2">Source from China</span>
+                        </h1>
+
+                        <p class="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed" data-lang="hero-sub">
+                            We act as your dedicated procurement intermediary in China — verifying factories, controlling quality, negotiating prices, and managing logistics. 100% transparent, zero hidden fees, and a local team on the ground.
+                        </p>
+
+                        <!-- CTA buttons -->
+                        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                            <a href="#contact"
+                               class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-base font-bold text-white btn-accent shadow-lg shadow-orange-500/20">
+                                <span data-lang="hero-cta1">Find New Suppliers</span>
+                                <i class="fas fa-search text-sm" aria-hidden="true"></i>
+                            </a>
+                            <a href="#contact"
+                               class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-base font-semibold text-white bg-white/10 backdrop-blur-sm border border-white/25 hover:bg-white/20 transition-colors">
+                                <i class="fas fa-users-gear text-sm" aria-hidden="true"></i>
+                                <span data-lang="hero-cta2">Manage My Suppliers</span>
+                            </a>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-handshake text-[#f7b733]" aria-hidden="true"></i>
-                            <span data-lang="hero-trust3">No Middlemen</span>
+
+                        <!-- Trust indicators -->
+                        <div class="mt-10 flex flex-wrap items-center gap-8 text-white/60 text-sm" aria-label="Trust indicators">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-shield-halved text-[#f7b733]" aria-hidden="true"></i>
+                                <span data-lang="hero-trust1">Secure &amp; Insured</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-clock text-[#f7b733]" aria-hidden="true"></i>
+                                <span data-lang="hero-trust2">48h Response Time</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-handshake text-[#f7b733]" aria-hidden="true"></i>
+                                <span data-lang="hero-trust3">No Middlemen</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Right: Image -->
+                    <div class="flex-1 flex justify-center lg:justify-end">
+                        <div class="relative w-full max-w-md">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80"
+                                 alt="Global shipping and logistics"
+                                 class="w-full h-auto rounded-2xl shadow-2xl"
+                                 loading="eager"
+                                 fetchpriority="high" />
+                            <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-[#f7b733]/20 rounded-full blur-xl" aria-hidden="true"></div>
+                            <div class="absolute -top-4 -right-4 w-32 h-32 bg-white/5 rounded-full blur-xl" aria-hidden="true"></div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-
-            <!-- Scroll indicator -->
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce" aria-hidden="true">
-                <i class="fas fa-chevron-down text-white/40 text-xl"></i>
             </div>
         </section>
 
         <!-- ============================================================ -->
         <!-- TRUSTED / STATS BAR                                          -->
         <!-- ============================================================ -->
-        <section class="relative bg-white border-b border-gray-100" aria-label="Company statistics">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+        <section class="relative bg-[#1e3a5f] overflow-hidden" aria-label="Company statistics">
+            <!-- Subtle pattern -->
+            <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 50% 50%, #ffffff 1px, transparent 1px); background-size: 30px 30px;" aria-hidden="true"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div>
-                        <div class="stat-number text-[#1e3a5f]">500+</div>
-                        <div class="text-sm text-gray-500 mt-1" data-lang="stat-buyers">Happy Buyers</div>
+                        <div class="stat-number text-white text-4xl lg:text-5xl font-extrabold">6,000+</div>
+                        <div class="text-sm text-white/70 mt-1 uppercase tracking-wider font-medium" data-lang="stat-buyers">Happy Clients</div>
                     </div>
                     <div>
-                        <div class="stat-number text-[#1e3a5f]">2,800+</div>
-                        <div class="text-sm text-gray-500 mt-1" data-lang="stat-factories">Factories Verified</div>
+                        <div class="stat-number text-white text-4xl lg:text-5xl font-extrabold">100+</div>
+                        <div class="text-sm text-white/70 mt-1 uppercase tracking-wider font-medium" data-lang="stat-factories">Million-dollar Sellers</div>
                     </div>
                     <div>
-                        <div class="stat-number text-[#1e3a5f]">98.6%</div>
-                        <div class="text-sm text-gray-500 mt-1" data-lang="stat-delivery">On-Time Delivery</div>
+                        <div class="stat-number text-white text-4xl lg:text-5xl font-extrabold">1M+</div>
+                        <div class="text-sm text-white/70 mt-1 uppercase tracking-wider font-medium" data-lang="stat-delivery">Followers</div>
                     </div>
                     <div>
-                        <div class="stat-number text-[#1e3a5f]">15+</div>
-                        <div class="text-sm text-gray-500 mt-1" data-lang="stat-experience">Years Experience</div>
+                        <div class="stat-number text-white text-4xl lg:text-5xl font-extrabold">200+</div>
+                        <div class="text-sm text-white/70 mt-1 uppercase tracking-wider font-medium" data-lang="stat-experience">Staff</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================ -->
-        <!-- BREADCRUMB (SEO & UX)                                        -->
-        <!-- ============================================================ -->
-        <nav class="bg-white border-b border-gray-100 py-2" aria-label="Breadcrumb">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <ol class="flex items-center gap-1.5 text-xs text-gray-400" itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a href="https://chinabuyingteam.com/" itemprop="item" class="hover:text-[#1e3a5f] transition-colors">
-                            <span itemprop="name">Home</span>
-                        </a>
-                        <meta itemprop="position" content="1" />
-                        <span class="mx-1">/</span>
-                    </li>
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <span itemprop="name" class="text-gray-600">China Sourcing Agent</span>
-                        <meta itemprop="position" content="2" />
-                    </li>
-                </ol>
-            </div>
-        </nav>
+        
 
         <!-- ============================================================ -->
-        <!-- SERVICES                                                     -->
+        <!-- SERVICES / CUSTOMER TYPES                                   -->
         <!-- ============================================================ -->
         <section id="services" class="relative py-20 lg:py-28 bg-gray-50" aria-label="Our services">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -750,81 +735,130 @@
                 </div>
 
                 <!-- Service cards -->
-                <div class="mt-14 grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <div class="mt-14 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
-                    <!-- 1. Factory Audit & Inspection -->
-                    <article class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                    <!-- 1. Tailored for Amazon Sellers -->
+                    <article class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 flex flex-col">
                         <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-xl shadow-md" aria-hidden="true">
-                            <i class="fas fa-building-shield"></i>
+                            <i class="fab fa-amazon"></i>
                         </div>
-                        <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]" data-lang="svc1-title">Factory Audit &amp; Inspection</h3>
-                        <p class="mt-2 text-sm text-gray-500 leading-relaxed" data-lang="svc1-desc">
-                            Comprehensive on-site factory audits covering facilities, certifications, production capacity, and compliance. We verify every supplier so you can partner with confidence.
+                        <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]" data-lang="svc1-title">Tailored for Amazon Sellers</h3>
+                        <p class="mt-2 text-sm text-gray-500 leading-relaxed flex-1" data-lang="svc1-desc">
+                            Customized sourcing solutions for Amazon sellers. We help you find winning products, manage private labeling, arrange logo printing and custom packaging, and ensure your inventory meets Amazon's strict requirements.
                         </p>
                         <ul class="mt-4 space-y-1.5 text-sm text-gray-500" aria-label="Service features">
                             <li class="flex items-start gap-2">
                                 <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
-                                <span data-lang="svc1-f1">On-site facility &amp; capability audit</span>
+                                <span data-lang="svc1-f1">Product research &amp; sourcing</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
-                                <span data-lang="svc1-f2">License, compliance &amp; social compliance</span>
+                                <span data-lang="svc1-f2">Private label &amp; custom packaging</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
-                                <span data-lang="svc1-f3">Detailed audit report with photos</span>
+                                <span data-lang="svc1-f3">Amazon compliance &amp; FBA prep</span>
                             </li>
                         </ul>
+                        <div class="mt-6 pt-4 border-t border-gray-100">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-[#f7b733] hover:text-[#e5a52e] transition-colors">
+                                <span data-lang="svc1-cta">Learn More</span>
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
                     </article>
 
-                    <!-- 2. Quality Control & Inspection -->
-                    <article class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                    <!-- 2. Global Dropshipping at Factory Prices -->
+                    <article class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 flex flex-col">
                         <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-xl shadow-md" aria-hidden="true">
-                            <i class="fas fa-clipboard-check"></i>
+                            <i class="fas fa-globe"></i>
                         </div>
-                        <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]" data-lang="svc2-title">Quality Control &amp; Inspection</h3>
-                        <p class="mt-2 text-sm text-gray-500 leading-relaxed" data-lang="svc2-desc">
-                            Dual-stage quality checks — during production (DUPRO) and pre-shipment (PSI). Our experienced inspectors ensure your products meet every specification.
+                        <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]" data-lang="svc2-title">Global Dropshipping at Factory Prices</h3>
+                        <p class="mt-2 text-sm text-gray-500 leading-relaxed flex-1" data-lang="svc2-desc">
+                            Leverage our China sourcing expertise to dropship products at factory-direct prices. We handle supplier communication, quality checks, and direct shipping to your customers worldwide — no inventory needed.
                         </p>
                         <ul class="mt-4 space-y-1.5 text-sm text-gray-500" aria-label="Service features">
                             <li class="flex items-start gap-2">
                                 <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
-                                <span data-lang="svc2-f1">During-production inspection (DUPRO)</span>
+                                <span data-lang="svc2-f1">Factory-direct pricing</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
-                                <span data-lang="svc2-f2">Pre-shipment inspection (PSI)</span>
+                                <span data-lang="svc2-f2">Direct shipping to customers</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
-                                <span data-lang="svc2-f3">Product testing &amp; compliance certification</span>
+                                <span data-lang="svc2-f3">No minimum order quantities</span>
                             </li>
                         </ul>
+                        <div class="mt-6 pt-4 border-t border-gray-100">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-[#f7b733] hover:text-[#e5a52e] transition-colors">
+                                <span data-lang="svc2-cta">Learn More</span>
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
                     </article>
 
-                    <!-- 3. Landed Cost Analysis & Price Negotiation -->
-                    <article class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100">
+                    <!-- 3. Efficient Sourcing for Retailers -->
+                    <article class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 flex flex-col">
                         <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-xl shadow-md" aria-hidden="true">
-                            <i class="fas fa-calculator"></i>
+                            <i class="fas fa-store"></i>
                         </div>
-                        <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]" data-lang="svc3-title">Landed Cost Analysis &amp; Negotiation</h3>
-                        <p class="mt-2 text-sm text-gray-500 leading-relaxed" data-lang="svc3-desc">
-                            Full cost transparency from factory to doorstep. We analyze every cost component and negotiate aggressively on your behalf.
+                        <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]" data-lang="svc3-title">Efficient Sourcing for Retailers</h3>
+                        <p class="mt-2 text-sm text-gray-500 leading-relaxed flex-1" data-lang="svc3-desc">
+                            Streamlined SKU sourcing and multi-supplier management for retail businesses. We handle the complexity of sourcing hundreds of products across multiple categories and suppliers.
                         </p>
                         <ul class="mt-4 space-y-1.5 text-sm text-gray-500" aria-label="Service features">
                             <li class="flex items-start gap-2">
                                 <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
-                                <span data-lang="svc3-f1">Detailed landed cost breakdown</span>
+                                <span data-lang="svc3-f1">Multi-SKU &amp; multi-supplier sourcing</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
-                                <span data-lang="svc3-f2">Price &amp; MOQ negotiation</span>
+                                <span data-lang="svc3-f2">Consolidated shipping &amp; logistics</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
-                                <span data-lang="svc3-f3">Payment terms &amp; contract review</span>
+                                <span data-lang="svc3-f3">Supplier performance tracking</span>
                             </li>
                         </ul>
+                        <div class="mt-6 pt-4 border-t border-gray-100">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-[#f7b733] hover:text-[#e5a52e] transition-colors">
+                                <span data-lang="svc3-cta">Learn More</span>
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 4. Procurement for Government & Enterprises -->
+                    <article class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 flex flex-col">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-xl shadow-md" aria-hidden="true">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]" data-lang="svc4-title">Procurement for Government &amp; Enterprises</h3>
+                        <p class="mt-2 text-sm text-gray-500 leading-relaxed flex-1" data-lang="svc4-desc">
+                            Reliable sourcing partner for large enterprises, government agencies, and institutions. We deliver consistent quality, strict timelines, and scalable solutions for projects of any size.
+                        </p>
+                        <ul class="mt-4 space-y-1.5 text-sm text-gray-500" aria-label="Service features">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
+                                <span data-lang="svc4-f1">Guaranteed lead times &amp; quality</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
+                                <span data-lang="svc4-f2">Scalable order volumes</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-500 mt-0.5 text-xs" aria-hidden="true"></i>
+                                <span data-lang="svc4-f3">Favorable credit terms available</span>
+                            </li>
+                        </ul>
+                        <div class="mt-6 pt-4 border-t border-gray-100">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-[#f7b733] hover:text-[#e5a52e] transition-colors">
+                                <span data-lang="svc4-cta">Learn More</span>
+                                <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
                     </article>
 
                 </div>
@@ -832,7 +866,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- WHY CHOOSE US                                                -->
+        <!-- WHY CHOOSE US / WHAT SETS US APART                         -->
         <!-- ============================================================ -->
         <section id="why-us" class="relative py-20 lg:py-28 bg-white overflow-hidden" aria-label="Why choose us">
             <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#1e3a5f]/[0.02] to-transparent pointer-events-none" aria-hidden="true"></div>
@@ -840,9 +874,9 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div class="text-center max-w-2xl mx-auto">
-                    <span class="text-sm font-semibold text-[#f7b733] tracking-widest uppercase" data-lang="why-label">Why Choose Us</span>
+                    <span class="text-sm font-semibold text-[#f7b733] tracking-widest uppercase" data-lang="why-label">What Sets Us Apart</span>
                     <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1e3a5f] tracking-tight" data-lang="why-title">
-                        What Sets Us Apart
+                        Why Choose Us
                     </h2>
                     <div class="section-divider mt-4" role="presentation"></div>
                     <p class="mt-4 text-gray-500 text-lg" data-lang="why-desc">
@@ -854,63 +888,130 @@
 
                     <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
                         <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg" aria-hidden="true">
-                            <i class="fas fa-percent"></i>
+                            <i class="fas fa-shield-check"></i>
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why1-title">100% Transparent Pricing</h3>
-                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why1-desc">You see exactly what the factory charges and what our service fee is. No hidden markups, no surprises.</p>
+                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why1-title">Quality Assurance</h3>
+                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why1-desc">Rigorous multi-stage quality inspections ensure every product meets your specifications before shipment. Zero compromises on quality.</p>
                         </div>
                     </div>
 
                     <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
                         <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg" aria-hidden="true">
-                            <i class="fas fa-hand-holding-dollar"></i>
+                            <i class="fas fa-tags"></i>
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why2-title">Zero Hidden Fees</h3>
-                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why2-desc">Our service agreement is straightforward. The price we quote is the price you pay — guaranteed.</p>
+                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why2-title">Competitive Prices</h3>
+                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why2-desc">We leverage our extensive supplier network and local expertise to negotiate the best factory-direct prices on your behalf.</p>
                         </div>
                     </div>
 
                     <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
                         <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg" aria-hidden="true">
-                            <i class="fas fa-people-group"></i>
+                            <i class="fas fa-handshake"></i>
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why3-title">Dedicated Local Team</h3>
-                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why3-desc">Your personal sourcing agent based in China speaks your language and understands your business needs.</p>
+                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why3-title">Commitment to Our Clients</h3>
+                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why3-desc">Your success is our priority. We provide dedicated account managers, transparent communication, and 24/7 support throughout your sourcing journey.</p>
                         </div>
                     </div>
 
                     <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
                         <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg" aria-hidden="true">
-                            <i class="fas fa-bolt"></i>
+                            <i class="fas fa-users"></i>
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why4-title">Fast Response Time</h3>
-                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why4-desc">We respond to all inquiries within 24 hours. Urgent requests get same-day attention.</p>
+                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why4-title">Professional Sourcing Team</h3>
+                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why4-desc">Our experienced team of sourcing professionals, quality inspectors, and logistics coordinators work together to deliver exceptional results.</p>
                         </div>
                     </div>
 
                     <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
                         <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg" aria-hidden="true">
-                            <i class="fas fa-scale-balanced"></i>
+                            <i class="fas fa-box"></i>
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why5-title">Quality Guarantee</h3>
-                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why5-desc">If the product doesn't meet agreed specifications, we work with the factory to make it right or your money back.</p>
+                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why5-title">In-house Packaging Solution</h3>
+                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why5-desc">From custom packaging design to quality printing and assembly, our in-house packaging solutions ensure your products arrive ready for retail shelves.</p>
                         </div>
                     </div>
 
                     <div class="flex gap-5 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
                         <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg" aria-hidden="true">
-                            <i class="fas fa-globe"></i>
+                            <i class="fas fa-chart-line"></i>
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why6-title">Global Reach</h3>
-                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why6-desc">We ship to 50+ countries worldwide. Our logistics partners ensure your goods arrive safely and on time.</p>
+                            <h3 class="text-base font-bold text-[#1e3a5f]" data-lang="why6-title">Special Services for Growing Businesses</h3>
+                            <p class="mt-1 text-sm text-gray-500 leading-relaxed" data-lang="why6-desc">Flexible payment terms, low MOQs, and scalable solutions designed to support startups and growing e-commerce brands.</p>
                         </div>
                     </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- VALUE-ADDED SERVICES                                        -->
+        <!-- ============================================================ -->
+        <section class="relative py-20 lg:py-28 bg-gray-50" aria-label="Value-added services">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center max-w-2xl mx-auto">
+                    <span class="text-sm font-semibold text-[#f7b733] tracking-widest uppercase" data-lang="value-label">Value-added Services</span>
+                    <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1e3a5f] tracking-tight" data-lang="value-title">
+                        Beyond Sourcing — We Do More
+                    </h2>
+                    <div class="section-divider mt-4" role="presentation"></div>
+                    <p class="mt-4 text-gray-500 text-lg" data-lang="value-desc">
+                        Comprehensive services to protect your investment and streamline your supply chain.
+                    </p>
+                </div>
+
+                <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+
+                    <!-- 1. Factory & Supplier Audit -->
+                    <article class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 text-center">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-2xl shadow-md mx-auto" aria-hidden="true">
+                            <i class="fas fa-building-shield"></i>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]" data-lang="value1-title">Factory &amp; Supplier Audit</h3>
+                        <p class="mt-2 text-sm text-gray-500 leading-relaxed" data-lang="value1-desc">
+                            On-site facility verification, capability assessment, compliance checks, and detailed reporting with photo evidence to ensure you partner with reliable suppliers.
+                        </p>
+                    </article>
+
+                    <!-- 2. 1-by-1 Product Inspection -->
+                    <article class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 text-center">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-2xl shadow-md mx-auto" aria-hidden="true">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]" data-lang="value2-title">1-by-1 Product Inspection</h3>
+                        <p class="mt-2 text-sm text-gray-500 leading-relaxed" data-lang="value2-desc">
+                            Thorough quality control inspections covering materials, workmanship, functionality, packaging, and labeling — all before shipment leaves the factory.
+                        </p>
+                    </article>
+
+                    <!-- 3. Warehousing & Storage -->
+                    <article class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 text-center">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d6a9f] flex items-center justify-center text-white text-2xl shadow-md mx-auto" aria-hidden="true">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]" data-lang="value3-title">Warehousing &amp; Storage</h3>
+                        <p class="mt-2 text-sm text-gray-500 leading-relaxed" data-lang="value3-desc">
+                            Secure warehousing solutions in China for inventory consolidation, quality holds, and order fulfillment. Flexible storage terms to match your business needs.
+                        </p>
+                    </article>
+
+                    <!-- 4. Lifestyle Photography -->
+                    <article class="card-hover bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 text-center">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#f7b733] to-[#fc4a1a] flex items-center justify-center text-white text-2xl shadow-md mx-auto" aria-hidden="true">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3 class="mt-5 text-lg font-bold text-[#1e3a5f]" data-lang="value4-title">Lifestyle Photography</h3>
+                        <p class="mt-2 text-sm text-gray-500 leading-relaxed" data-lang="value4-desc">
+                            Professional product and lifestyle photography to showcase your products. High-quality images for your e-commerce listings, catalogs, and marketing materials.
+                        </p>
+                    </article>
 
                 </div>
             </div>
@@ -1565,52 +1666,72 @@
                     "nav-contact": "Contact",
                     "nav-cta": "Get Started",
                     "hero-badge": "Trusted by 500+ buyers worldwide",
-                    "hero-title-part1": "Your Trusted",
-                    "hero-title-part2": "China Procurement Intermediary",
+                    "hero-title-part1": "We Make it Easy to",
+                    "hero-title-part2": "Source from China",
                     "hero-title-part3": "& Sourcing Agent",
                     "hero-sub": "We act as your dedicated procurement intermediary in China \u2014 verifying factories, controlling quality, negotiating prices, and managing logistics. 100% transparent, zero hidden fees, and a local team on the ground.",
-                    "hero-cta1": "Get a Free Quote",
-                    "hero-cta2": "See How It Works",
+                    "hero-cta1": "Find New Suppliers",
+                    "hero-cta2": "Manage My Suppliers",
                     "hero-trust1": "Secure & Insured",
                     "hero-trust2": "48h Response Time",
                     "hero-trust3": "No Middlemen",
-                    "stat-buyers": "Happy Buyers",
-                    "stat-factories": "Factories Verified",
-                    "stat-delivery": "On-Time Delivery",
-                    "stat-experience": "Years Experience",
+                    "stat-buyers": "Happy Clients",
+                    "stat-factories": "Million-dollar Sellers",
+                    "stat-delivery": "Followers",
+                    "stat-experience": "Staff",
                     "services-label": "Our Services",
                     "services-title": "Complete China Sourcing Solutions",
                     "services-desc": "From supplier selection to delivery \u2014 we cover every step of your procurement journey.",
-                    "svc1-title": "Factory Audit & Inspection",
-                    "svc1-desc": "Comprehensive on-site factory audits covering facilities, certifications, production capacity, and compliance. We verify every supplier so you can partner with confidence.",
-                    "svc1-f1": "On-site facility & capability audit",
-                    "svc1-f2": "License, compliance & social compliance",
-                    "svc1-f3": "Detailed audit report with photos",
-                    "svc2-title": "Quality Control & Inspection",
-                    "svc2-desc": "Dual-stage quality checks \u2014 during production (DUPRO) and pre-shipment (PSI). Our experienced inspectors ensure your products meet every specification.",
-                    "svc2-f1": "During-production inspection (DUPRO)",
-                    "svc2-f2": "Pre-shipment inspection (PSI)",
-                    "svc2-f3": "Product testing & compliance certification",
-                    "svc3-title": "Landed Cost Analysis & Negotiation",
-                    "svc3-desc": "Full cost transparency from factory to doorstep. We analyze every cost component and negotiate aggressively on your behalf.",
-                    "svc3-f1": "Detailed landed cost breakdown",
-                    "svc3-f2": "Price & MOQ negotiation",
-                    "svc3-f3": "Payment terms & contract review",
-                    "why-label": "Why Choose Us",
-                    "why-title": "What Sets Us Apart",
+                    "svc1-title": "Tailored for Amazon Sellers",
+                    "svc1-desc": "Customized sourcing solutions for Amazon sellers. We help you find winning products, manage private labeling, arrange logo printing and custom packaging, and ensure your inventory meets Amazon's strict requirements.",
+                    "svc1-f1": "Product research &amp; sourcing",
+                    "svc1-f2": "Private label &amp; custom packaging",
+                    "svc1-f3": "Amazon compliance &amp; FBA prep",
+                    "svc1-cta": "Learn More",
+                    "svc2-title": "Global Dropshipping at Factory Prices",
+                    "svc2-desc": "Leverage our China sourcing expertise to dropship products at factory-direct prices. We handle supplier communication, quality checks, and direct shipping to your customers worldwide \u2014 no inventory needed.",
+                    "svc2-f1": "Factory-direct pricing",
+                    "svc2-f2": "Direct shipping to customers",
+                    "svc2-f3": "No minimum order quantities",
+                    "svc2-cta": "Learn More",
+                    "svc3-title": "Efficient Sourcing for Retailers",
+                    "svc3-desc": "Streamlined SKU sourcing and multi-supplier management for retail businesses. We handle the complexity of sourcing hundreds of products across multiple categories and suppliers.",
+                    "svc3-f1": "Multi-SKU &amp; multi-supplier sourcing",
+                    "svc3-f2": "Consolidated shipping &amp; logistics",
+                    "svc3-f3": "Supplier performance tracking",
+                    "svc3-cta": "Learn More",
+                    "svc4-title": "Procurement for Government & Enterprises",
+                    "svc4-desc": "Reliable sourcing partner for large enterprises, government agencies, and institutions. We deliver consistent quality, strict timelines, and scalable solutions for projects of any size.",
+                    "svc4-f1": "Guaranteed lead times & quality",
+                    "svc4-f2": "Scalable order volumes",
+                    "svc4-f3": "Favorable credit terms available",
+                    "svc4-cta": "Learn More",
+                    "why-label": "What Sets Us Apart",
+                    "why-title": "Why Choose Us",
                     "why-desc": "We believe in radical transparency. No surprises, no hidden fees \u2014 just honest, professional service.",
-                    "why1-title": "100% Transparent Pricing",
-                    "why1-desc": "You see exactly what the factory charges and what our service fee is. No hidden markups, no surprises.",
-                    "why2-title": "Zero Hidden Fees",
-                    "why2-desc": "Our service agreement is straightforward. The price we quote is the price you pay \u2014 guaranteed.",
-                    "why3-title": "Dedicated Local Team",
-                    "why3-desc": "Your personal sourcing agent based in China speaks your language and understands your business needs.",
-                    "why4-title": "Fast Response Time",
-                    "why4-desc": "We respond to all inquiries within 24 hours. Urgent requests get same-day attention.",
-                    "why5-title": "Quality Guarantee",
-                    "why5-desc": "If the product doesn't meet agreed specifications, we work with the factory to make it right or your money back.",
-                    "why6-title": "Global Reach",
-                    "why6-desc": "We ship to 50+ countries worldwide. Our logistics partners ensure your goods arrive safely and on time.",
+                    "why1-title": "Quality Assurance",
+                    "why1-desc": "Rigorous multi-stage quality inspections ensure every product meets your specifications before shipment. Zero compromises on quality.",
+                    "why2-title": "Competitive Prices",
+                    "why2-desc": "We leverage our extensive supplier network and local expertise to negotiate the best factory-direct prices on your behalf.",
+                    "why3-title": "Commitment to Our Clients",
+                    "why3-desc": "Your success is our priority. We provide dedicated account managers, transparent communication, and 24/7 support throughout your sourcing journey.",
+                    "why4-title": "Professional Sourcing Team",
+                    "why4-desc": "Our experienced team of sourcing professionals, quality inspectors, and logistics coordinators work together to deliver exceptional results.",
+                    "why5-title": "In-house Packaging Solution",
+                    "why5-desc": "From custom packaging design to quality printing and assembly, our in-house packaging solutions ensure your products arrive ready for retail shelves.",
+                    "why6-title": "Special Services for Growing Businesses",
+                    "why6-desc": "Flexible payment terms, low MOQs, and scalable solutions designed to support startups and growing e-commerce brands.",
+                    "value-label": "Value-added Services",
+                    "value-title": "Beyond Sourcing \u2014 We Do More",
+                    "value-desc": "Comprehensive services to protect your investment and streamline your supply chain.",
+                    "value1-title": "Factory &amp; Supplier Audit",
+                    "value1-desc": "On-site facility verification, capability assessment, compliance checks, and detailed reporting with photo evidence to ensure you partner with reliable suppliers.",
+                    "value2-title": "1-by-1 Product Inspection",
+                    "value2-desc": "Thorough quality control inspections covering materials, workmanship, functionality, packaging, and labeling \u2014 all before shipment leaves the factory.",
+                    "value3-title": "Warehousing &amp; Storage",
+                    "value3-desc": "Secure warehousing solutions in China for inventory consolidation, quality holds, and order fulfillment. Flexible storage terms to match your business needs.",
+                    "value4-title": "Lifestyle Photography",
+                    "value4-desc": "Professional product and lifestyle photography to showcase your products. High-quality images for your e-commerce listings, catalogs, and marketing materials.",
                     "how-label": "How It Works",
                     "how-title": "From Inquiry to Delivery in 4 Simple Steps",
                     "how-desc": "We've streamlined the sourcing process so you get results fast, without the headache.",
