@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lighting Sourcing ¡ª abnerchinasourcing | Indoor, Outdoor, Decorative & Smart Lighting</title>
+    <title>Lighting Sourcing ï¿½ï¿½ abnerchinasourcing | Indoor, Outdoor, Decorative & Smart Lighting</title>
     <meta name="description" content="Source indoor lighting, decorative lights, special lighting, outdoor lighting, candles, and smart lighting from China. LED and energy-saving." />
     <meta name="keywords" content="lighting sourcing China, LED lighting, decorative lights, smart lighting, candle wholesale" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
@@ -15,7 +15,7 @@
     <meta name="msapplication-TileColor" content="#1e3a5f" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://chinabuyingteam.com/products-lighting.html" />
-    <meta property="og:title" content="Lighting Sourcing ¡ª abnerchinasourcing | Indoor, Outdoor, Decorative & Smart Lighting" />
+    <meta property="og:title" content="Lighting Sourcing ï¿½ï¿½ abnerchinasourcing | Indoor, Outdoor, Decorative & Smart Lighting" />
     <meta property="og:description" content="Source indoor lighting, decorative lights, special lighting, outdoor lighting, candles, and smart lighting from China. LED and energy-saving." />
     <meta property="og:site_name" content="abnerchinasourcing" />
     <meta property="og:locale" content="en_US" />
@@ -23,7 +23,7 @@
     <meta property="og:image:width" content="160" />
     <meta property="og:image:height" content="80" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Lighting Sourcing ¡ª abnerchinasourcing | Indoor, Outdoor, Decorative & Smart Lighting" />
+    <meta name="twitter:title" content="Lighting Sourcing ï¿½ï¿½ abnerchinasourcing | Indoor, Outdoor, Decorative & Smart Lighting" />
     <meta name="twitter:description" content="Source indoor lighting, decorative lights, special lighting, outdoor lighting, candles, and smart lighting from China. LED and energy-saving." />
     <meta name="twitter:image" content="https://chinabuyingteam.com/logo.png" />
     <meta name="geo.region" content="CN-44" />
@@ -38,7 +38,7 @@
     <link rel="alternate" hreflang="zh" href="https://chinabuyingteam.com/products-lighting.html?lang=zh" />
     <link rel="alternate" hreflang="ja" href="https://chinabuyingteam.com/products-lighting.html?lang=ja" />
     <link rel="alternate" hreflang="ko" href="https://chinabuyingteam.com/products-lighting.html?lang=ko" />
-    <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/products-lighting.html?lang=es" />
+    <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/es/products-lighting.html" />
     <link rel="alternate" hreflang="x-default" href="https://chinabuyingteam.com/products-lighting.html" />    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -535,6 +535,10 @@
                 }
             };
             function setLanguage(lang) {
+                if (lang === 'es') {
+                    window.location.href = 'https://chinabuyingteam.com/es/';
+                    return;
+                }
                 const t = translations[lang]; if (!t) return;
                 try { localStorage.setItem('preferredLang', lang); } catch(e) {}
                 document.querySelectorAll('[data-lang]').forEach(el => {

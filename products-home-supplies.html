@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Supplies Sourcing ¡ª abnerchinasourcing | Decor, Appliances, Kitchen & More</title>
+    <title>Home Supplies Sourcing ï¿½ï¿½ abnerchinasourcing | Decor, Appliances, Kitchen & More</title>
     <meta name="description" content="Source home decor, appliances, lighting, sundries, bath, bedding, kitchen, and smoking accessories from China. Competitive factory pricing." />
     <meta name="keywords" content="home supplies sourcing, home decor wholesale, kitchenware, bedding supplier, home appliances China" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
@@ -15,7 +15,7 @@
     <meta name="msapplication-TileColor" content="#1e3a5f" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://chinabuyingteam.com/products-home-supplies.html" />
-    <meta property="og:title" content="Home Supplies Sourcing ¡ª abnerchinasourcing | Decor, Appliances, Kitchen & More" />
+    <meta property="og:title" content="Home Supplies Sourcing ï¿½ï¿½ abnerchinasourcing | Decor, Appliances, Kitchen & More" />
     <meta property="og:description" content="Source home decor, appliances, lighting, sundries, bath, bedding, kitchen, and smoking accessories from China. Competitive factory pricing." />
     <meta property="og:site_name" content="abnerchinasourcing" />
     <meta property="og:locale" content="en_US" />
@@ -23,7 +23,7 @@
     <meta property="og:image:width" content="160" />
     <meta property="og:image:height" content="80" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Home Supplies Sourcing ¡ª abnerchinasourcing | Decor, Appliances, Kitchen & More" />
+    <meta name="twitter:title" content="Home Supplies Sourcing ï¿½ï¿½ abnerchinasourcing | Decor, Appliances, Kitchen & More" />
     <meta name="twitter:description" content="Source home decor, appliances, lighting, sundries, bath, bedding, kitchen, and smoking accessories from China. Competitive factory pricing." />
     <meta name="twitter:image" content="https://chinabuyingteam.com/logo.png" />
     <meta name="geo.region" content="CN-44" />
@@ -38,7 +38,7 @@
     <link rel="alternate" hreflang="zh" href="https://chinabuyingteam.com/products-home-supplies.html?lang=zh" />
     <link rel="alternate" hreflang="ja" href="https://chinabuyingteam.com/products-home-supplies.html?lang=ja" />
     <link rel="alternate" hreflang="ko" href="https://chinabuyingteam.com/products-home-supplies.html?lang=ko" />
-    <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/products-home-supplies.html?lang=es" />
+    <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/es/products-home-supplies.html" />
     <link rel="alternate" hreflang="x-default" href="https://chinabuyingteam.com/products-home-supplies.html" />    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -547,6 +547,10 @@
                 }
             };
             function setLanguage(lang) {
+                if (lang === 'es') {
+                    window.location.href = 'https://chinabuyingteam.com/es/';
+                    return;
+                }
                 const t = translations[lang]; if (!t) return;
                 try { localStorage.setItem('preferredLang', lang); } catch(e) {}
                 document.querySelectorAll('[data-lang]').forEach(el => {

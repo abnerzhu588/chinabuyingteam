@@ -359,6 +359,10 @@ $js = @'
                 }
             };
             function setLanguage(lang) {
+                if (lang === 'es') {
+                    window.location.href = 'https://chinabuyingteam.com/es/';
+                    return;
+                }
                 const t = translations[lang]; if (!t) return;
                 try { localStorage.setItem('preferredLang', lang); } catch(e) {}
                 document.querySelectorAll('[data-lang]').forEach(el => {
@@ -459,7 +463,7 @@ $head = @'
     <link rel="alternate" hreflang="zh" href="{CANONICAL}?lang=zh" />
     <link rel="alternate" hreflang="ja" href="{CANONICAL}?lang=ja" />
     <link rel="alternate" hreflang="ko" href="{CANONICAL}?lang=ko" />
-    <link rel="alternate" hreflang="es" href="{CANONICAL}?lang=es" />
+    <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/es/{CANONICAL_FILENAME}" />
     <link rel="alternate" hreflang="x-default" href="{CANONICAL}" />
 '@
 
@@ -610,7 +614,8 @@ function New-Card {
 function New-Page {
     param($Canonical, $Title, $Description, $Keywords, $CategoryName, $ShortDesc, $BreadcrumbName, $CtaName, $SubCategories)
 
-    $head1 = $head -replace "{TITLE}", $Title -replace "{DESC}", $Description -replace "{KEYWORDS}", $Keywords -replace "{CANONICAL}", $Canonical
+    $canonicalFilename = [System.IO.Path]::GetFileName($Canonical)
+    $head1 = $head -replace "{TITLE}", $Title -replace "{DESC}", $Description -replace "{KEYWORDS}", $Keywords -replace "{CANONICAL}", $Canonical -replace "{CANONICAL_FILENAME}", $canonicalFilename
     $bread1 = $breadSchema -replace "{BREADNAME}", $BreadcrumbName -replace "{CANONICAL}", $Canonical
     $headEnd1 = $headEnd -replace "{CSS}", $css -replace "{NAV}", $nav
     $hero1 = $heroSection -replace "{CATEGORY}", $CategoryName -replace "{SHORTDESC}", $ShortDesc

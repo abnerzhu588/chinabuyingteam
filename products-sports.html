@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sports Products Sourcing ¡ª abnerchinasourcing | Fitness, Apparel, Yoga, Games</title>
+    <title>Sports Products Sourcing ï¿½ï¿½ abnerchinasourcing | Fitness, Apparel, Yoga, Games</title>
     <meta name="description" content="Source sports equipment, fitness gear, clothing, yoga products, sports games, footwear, and accessories from China. Factory-direct pricing." />
     <meta name="keywords" content="sports sourcing China, fitness equipment, sportswear manufacturer, yoga products wholesale, athletic footwear" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
@@ -15,7 +15,7 @@
     <meta name="msapplication-TileColor" content="#1e3a5f" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://chinabuyingteam.com/products-sports.html" />
-    <meta property="og:title" content="Sports Products Sourcing ¡ª abnerchinasourcing | Fitness, Apparel, Yoga, Games" />
+    <meta property="og:title" content="Sports Products Sourcing ï¿½ï¿½ abnerchinasourcing | Fitness, Apparel, Yoga, Games" />
     <meta property="og:description" content="Source sports equipment, fitness gear, clothing, yoga products, sports games, footwear, and accessories from China. Factory-direct pricing." />
     <meta property="og:site_name" content="abnerchinasourcing" />
     <meta property="og:locale" content="en_US" />
@@ -23,7 +23,7 @@
     <meta property="og:image:width" content="160" />
     <meta property="og:image:height" content="80" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sports Products Sourcing ¡ª abnerchinasourcing | Fitness, Apparel, Yoga, Games" />
+    <meta name="twitter:title" content="Sports Products Sourcing ï¿½ï¿½ abnerchinasourcing | Fitness, Apparel, Yoga, Games" />
     <meta name="twitter:description" content="Source sports equipment, fitness gear, clothing, yoga products, sports games, footwear, and accessories from China. Factory-direct pricing." />
     <meta name="twitter:image" content="https://chinabuyingteam.com/logo.png" />
     <meta name="geo.region" content="CN-44" />
@@ -38,7 +38,7 @@
     <link rel="alternate" hreflang="zh" href="https://chinabuyingteam.com/products-sports.html?lang=zh" />
     <link rel="alternate" hreflang="ja" href="https://chinabuyingteam.com/products-sports.html?lang=ja" />
     <link rel="alternate" hreflang="ko" href="https://chinabuyingteam.com/products-sports.html?lang=ko" />
-    <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/products-sports.html?lang=es" />
+    <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/es/products-sports.html" />
     <link rel="alternate" hreflang="x-default" href="https://chinabuyingteam.com/products-sports.html" />    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -535,6 +535,10 @@
                 }
             };
             function setLanguage(lang) {
+                if (lang === 'es') {
+                    window.location.href = 'https://chinabuyingteam.com/es/';
+                    return;
+                }
                 const t = translations[lang]; if (!t) return;
                 try { localStorage.setItem('preferredLang', lang); } catch(e) {}
                 document.querySelectorAll('[data-lang]').forEach(el => {

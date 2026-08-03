@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apparel Sourcing ¡ª abnerchinasourcing | OEM/ODM Clothing, Accessories & More</title>
+    <title>Apparel Sourcing ï¿½ï¿½ abnerchinasourcing | OEM/ODM Clothing, Accessories & More</title>
     <meta name="description" content="Source apparel, fashion accessories, undergarments, jewelry, socks, and shoes from China. abnerchinasourcing offers OEM/ODM clothing manufacturing with factory-direct pricing." />
     <meta name="keywords" content="apparel sourcing China, clothing manufacturer, OEM clothing, fashion accessories wholesale, custom clothing China" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
@@ -15,7 +15,7 @@
     <meta name="msapplication-TileColor" content="#1e3a5f" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://chinabuyingteam.com/products-apparel.html" />
-    <meta property="og:title" content="Apparel Sourcing ¡ª abnerchinasourcing | OEM/ODM Clothing, Accessories & More" />
+    <meta property="og:title" content="Apparel Sourcing ï¿½ï¿½ abnerchinasourcing | OEM/ODM Clothing, Accessories & More" />
     <meta property="og:description" content="Source apparel, fashion accessories, undergarments, jewelry, socks, and shoes from China. abnerchinasourcing offers OEM/ODM clothing manufacturing with factory-direct pricing." />
     <meta property="og:site_name" content="abnerchinasourcing" />
     <meta property="og:locale" content="en_US" />
@@ -23,7 +23,7 @@
     <meta property="og:image:width" content="160" />
     <meta property="og:image:height" content="80" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Apparel Sourcing ¡ª abnerchinasourcing | OEM/ODM Clothing, Accessories & More" />
+    <meta name="twitter:title" content="Apparel Sourcing ï¿½ï¿½ abnerchinasourcing | OEM/ODM Clothing, Accessories & More" />
     <meta name="twitter:description" content="Source apparel, fashion accessories, undergarments, jewelry, socks, and shoes from China. abnerchinasourcing offers OEM/ODM clothing manufacturing with factory-direct pricing." />
     <meta name="twitter:image" content="https://chinabuyingteam.com/logo.png" />
     <meta name="geo.region" content="CN-44" />
@@ -38,7 +38,7 @@
     <link rel="alternate" hreflang="zh" href="https://chinabuyingteam.com/products-apparel.html?lang=zh" />
     <link rel="alternate" hreflang="ja" href="https://chinabuyingteam.com/products-apparel.html?lang=ja" />
     <link rel="alternate" hreflang="ko" href="https://chinabuyingteam.com/products-apparel.html?lang=ko" />
-    <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/products-apparel.html?lang=es" />
+    <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/es/products-apparel.html" />
     <link rel="alternate" hreflang="x-default" href="https://chinabuyingteam.com/products-apparel.html" />    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -535,6 +535,10 @@
                 }
             };
             function setLanguage(lang) {
+                if (lang === 'es') {
+                    window.location.href = 'https://chinabuyingteam.com/es/';
+                    return;
+                }
                 const t = translations[lang]; if (!t) return;
                 try { localStorage.setItem('preferredLang', lang); } catch(e) {}
                 document.querySelectorAll('[data-lang]').forEach(el => {

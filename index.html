@@ -57,7 +57,7 @@
     <link rel="alternate" hreflang="zh" href="https://chinabuyingteam.com/?lang=zh" />
     <link rel="alternate" hreflang="ja" href="https://chinabuyingteam.com/?lang=ja" />
     <link rel="alternate" hreflang="ko" href="https://chinabuyingteam.com/?lang=ko" />
-    <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/?lang=es" />
+    <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/es/" />
     <link rel="alternate" hreflang="x-default" href="https://chinabuyingteam.com/" />
 
     <!-- === JSON-LD Structured Data === -->
@@ -2453,6 +2453,10 @@
             };
 
             function setLanguage(lang) {
+                if (lang === 'es') {
+                    window.location.href = 'https://chinabuyingteam.com/es/';
+                    return;
+                }
                 const t = translations[lang] || translations.en;
                 document.querySelectorAll('[data-lang]').forEach(el => {
                     const key = el.getAttribute('data-lang');
