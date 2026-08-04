@@ -258,7 +258,7 @@
                 </nav>
                 <div class="hidden lg:flex items-center gap-3">
                     <div class="lang-dropdown" id="langDropdown">
-                        <button id="langToggle" class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-gray-500 hover:text-[#1e3a5f] hover:bg-gray-100 transition-colors" aria-label="Select language" aria-haspopup="true">
+                        <button id="langToggle" onclick="event.stopPropagation();document.getElementById('langMenu').classList.toggle('open');" class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-gray-500 hover:text-[#1e3a5f] hover:bg-gray-100 transition-colors" aria-label="Select language" aria-haspopup="true">
                             <i class="fas fa-globe text-xs"></i>
                             <span id="currentLangLabel">EN</span>
                             <i class="fas fa-chevron-down text-[10px]"></i>
@@ -597,6 +597,10 @@
             const mobileLangBtns = document.querySelectorAll('.lang-mobile-btn');
             let currentLang = localStorage.getItem('preferredLang') || 'en';
             function applyLang(lang) {
+                if (lang === 'es') {
+                    window.location.href = 'https://chinabuyingteam.com/es/contact.html';
+                    return;
+                }
                 const t = translations[lang] || translations.en;
                 document.querySelectorAll('[data-lang]').forEach(el => {
                     const key = el.getAttribute('data-lang');
@@ -611,7 +615,7 @@
                 localStorage.setItem('preferredLang', lang);
                 currentLang = lang;
             }
-            langToggle.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('open'); });
+            // langToggle handled by inline onclick
             document.addEventListener('click', () => langMenu.classList.remove('open'));
 
             // Services dropdown toggle (Desktop)
