@@ -71,6 +71,7 @@
     <link rel="alternate" hreflang="ja" href="https://chinabuyingteam.com/solutions.html?lang=ja" />
     <link rel="alternate" hreflang="ko" href="https://chinabuyingteam.com/solutions.html?lang=ko" />
     <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/es/solutions.html" />
+    <link rel="alternate" hreflang="ar" href="https://chinabuyingteam.com/ar/solutions.html" />
     <link rel="alternate" hreflang="x-default" href="https://chinabuyingteam.com/solutions.html" />
 
     <!-- === JSON-LD Structured Data === -->
@@ -107,7 +108,7 @@
         "name": "abnerchinasourcing",
         "url": "https://chinabuyingteam.com/",
         "description": "Agente profesional de sourcing en China. Soluciones de marca privada, desarrollo de productos, envío y control de calidad.",
-        "inLanguage": ["es", "en", "zh", "ja", "ko"]
+        "inLanguage": ["es", "en", "zh", "ja", "ko", "ar"]
     }
     </script>
 
@@ -469,7 +470,7 @@
                 <div class="hidden lg:flex items-center gap-3">
                     <!-- Language Switcher -->
                     <div class="lang-dropdown" id="langDropdown">
-                        <button id="langToggle" class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-gray-500 hover:text-[#1e3a5f] hover:bg-gray-100 transition-colors" aria-label="Seleccionar idioma" aria-haspopup="true">
+                        <button id="langToggle" onclick="event.stopPropagation();document.getElementById(&apos;langMenu&apos;).classList.toggle(&apos;open&apos;);" class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-gray-500 hover:text-[#1e3a5f] hover:bg-gray-100 transition-colors" aria-label="Seleccionar idioma" aria-haspopup="true">
                             <i class="fas fa-globe text-xs"></i>
                             <span id="currentLangLabel">ES</span>
                             <i class="fas fa-chevron-down text-[10px]"></i>
@@ -480,6 +481,7 @@
                             <button class="lang-option" data-lang-code="ja" role="menuitem">Japanese</button>
                             <button class="lang-option" data-lang-code="ko" role="menuitem">Korean</button>
                             <button class="lang-option active" data-lang-code="es" role="menuitem">Español</button>
+                            <button class="lang-option" data-lang-code="ar" role="menuitem">العربية</button>
                         </div>
                     </div>
 
@@ -550,6 +552,7 @@
                         <button class="lang-mobile-btn px-3 py-1.5 rounded-lg text-sm border border-gray-200 text-gray-600 hover:bg-gray-50" data-lang-code="ja">Japanese</button>
                         <button class="lang-mobile-btn px-3 py-1.5 rounded-lg text-sm border border-gray-200 text-gray-600 hover:bg-gray-50" data-lang-code="ko">Korean</button>
                         <button class="lang-mobile-btn px-3 py-1.5 rounded-lg text-sm border border-gray-200 text-gray-600 hover:bg-gray-50 active" data-lang-code="es">ES</button>
+                        <button class="lang-mobile-btn px-3 py-1.5 rounded-lg text-sm border border-gray-200 text-gray-600 hover:bg-gray-50" data-lang-code="ar">العربية</button>
                     </div>
                 </div>
 
@@ -1282,12 +1285,7 @@
     <script>
         (function() {
             // Language switcher dropdown
-            document.getElementById('langToggle').addEventListener('click', function(e) {
-                e.stopPropagation();
-                document.getElementById('langMenu').classList.toggle('open');
-            });
-
-            // Language switcher - navigate to language-specific URLs
+// Language switcher - navigate to language-specific URLs
             document.querySelectorAll('.lang-option, .lang-mobile-btn').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const lang = this.dataset.langCode;
@@ -1296,7 +1294,8 @@
                         'zh': 'https://chinabuyingteam.com/solutions.html?lang=zh',
                         'ja': 'https://chinabuyingteam.com/solutions.html?lang=ja',
                         'ko': 'https://chinabuyingteam.com/solutions.html?lang=ko',
-                        'es': 'https://chinabuyingteam.com/es/solutions.html'
+                        'es': 'https://chinabuyingteam.com/es/solutions.html',
+                        'ar': 'https://chinabuyingteam.com/ar/solutions.html'
                     };
                     window.location.href = urls[lang] || urls.en;
                 });
