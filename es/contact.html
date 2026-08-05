@@ -60,7 +60,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <!-- === Language / Locale === -->
-    <meta name="language" content="es, en, zh, ja, ko" />
+    <meta name="language" content="es, en, zh, ja, ko, ar" />
 
     <!-- === Hreflang (Multi-language) === -->
     <link rel="alternate" hreflang="en" href="https://chinabuyingteam.com/contact.html" />
@@ -68,6 +68,7 @@
     <link rel="alternate" hreflang="ja" href="https://chinabuyingteam.com/contact.html?lang=ja" />
     <link rel="alternate" hreflang="ko" href="https://chinabuyingteam.com/contact.html?lang=ko" />
     <link rel="alternate" hreflang="es" href="https://chinabuyingteam.com/es/contact.html" />
+    <link rel="alternate" hreflang="ar" href="https://chinabuyingteam.com/ar/contact.html" />
     <link rel="alternate" hreflang="x-default" href="https://chinabuyingteam.com/contact.html" />
 
     <!-- === JSON-LD Structured Data === -->
@@ -405,7 +406,7 @@
                 <div class="hidden lg:flex items-center gap-3">
                     <!-- Language Switcher -->
                     <div class="lang-dropdown" id="langDropdown">
-                        <button id="langToggle" class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-gray-500 hover:text-[#1e3a5f] hover:bg-gray-100 transition-colors" aria-label="Seleccionar idioma" aria-haspopup="true">
+                        <button id="langToggle" onclick="event.stopPropagation();document.getElementById(&apos;langMenu&apos;).classList.toggle(&apos;open&apos;);" class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-gray-500 hover:text-[#1e3a5f] hover:bg-gray-100 transition-colors" aria-label="Seleccionar idioma" aria-haspopup="true">
                             <i class="fas fa-globe text-xs"></i>
                             <span id="currentLangLabel">ES</span>
                             <i class="fas fa-chevron-down text-[10px]"></i>
@@ -416,6 +417,7 @@
                             <button class="lang-option" data-lang-code="ja" role="menuitem">Japanese</button>
                             <button class="lang-option" data-lang-code="ko" role="menuitem">Korean</button>
                             <button class="lang-option active" data-lang-code="es" role="menuitem">Español</button>
+                            <button class="lang-option" data-lang-code="ar" role="menuitem">العربية</button>
                         </div>
                     </div>
 
@@ -479,6 +481,7 @@
                         <button class="lang-mobile-btn px-3 py-1.5 rounded-lg text-sm border border-gray-200 text-gray-600 hover:bg-gray-50" data-lang-code="ja">Japanese</button>
                         <button class="lang-mobile-btn px-3 py-1.5 rounded-lg text-sm border border-gray-200 text-gray-600 hover:bg-gray-50" data-lang-code="ko">Korean</button>
                         <button class="lang-mobile-btn px-3 py-1.5 rounded-lg text-sm border border-gray-200 text-gray-600 hover:bg-gray-50 active" data-lang-code="es">ES</button>
+                        <button class="lang-mobile-btn px-3 py-1.5 rounded-lg text-sm border border-gray-200 text-gray-600 hover:bg-gray-50" data-lang-code="ar">العربية</button>
                     </div>
                 </div>
 
@@ -714,12 +717,7 @@
     <script>
         (function() {
             // Language switcher dropdown
-            document.getElementById('langToggle').addEventListener('click', function(e) {
-                e.stopPropagation();
-                document.getElementById('langMenu').classList.toggle('open');
-            });
-
-            // Services dropdown toggle (Desktop)
+// Services dropdown toggle (Desktop)
             const servicesToggle = document.getElementById('servicesToggle');
             const servicesMenu = document.getElementById('servicesMenu');
             if (servicesToggle && servicesMenu) {
@@ -777,11 +775,12 @@
                 btn.addEventListener('click', function() {
                     const lang = this.dataset.langCode;
                     const urls = {
-                        'en': 'https://chinabuyingteam.com/',
+                        'en': 'https://chinabuyingteam.com/contact.html',
                         'zh': 'https://chinabuyingteam.com/?lang=zh',
                         'ja': 'https://chinabuyingteam.com/?lang=ja',
                         'ko': 'https://chinabuyingteam.com/?lang=ko',
-                        'es': 'https://chinabuyingteam.com/es/'
+                        'es': 'https://chinabuyingteam.com/es/contact.html',
+                        'ar': 'https://chinabuyingteam.com/ar/contact.html'
                     };
                     window.location.href = urls[lang] || urls.en;
                 });
